@@ -153,3 +153,133 @@ else{
 >  - 如果表达式1不成立, 采取判断表达式2是否成立
 >  - 如果表达式2成立, 就执行代码块
 >  - 以此类推, 如果所有代码块都不成立, 就直接直接执行else的代码块
+
+ - 实战演习
+   - 设定一个可以输入的分数
+   - 如果分数大于80, 输出
+   - 如果分数小于80且大于60, 输出
+   - 如果分数小于60, 输出
+
+
+ - 思路分析: 
+   - 先引用一个Scanner对象
+   - if - else if - else
+
+
+```java
+import java.util.Scanner;
+public class if06 {
+    public static void main(String[] args) {
+        try (Scanner MyScanner = new Scanner(System.in)) {
+            System.out.print("Your mark?");
+            int mark = MyScanner.nextInt();
+            if (mark >= 80){
+                System.out.print("GoodMark");
+            }
+            else if (mark < 80 && mark >60){
+                System.out.print("OK");
+            }
+            else{
+                System.out.print("BadMark");
+            }
+        }
+        }
+    }
+```
+
+ - 改进: 
+   - 如果输入小于0或大于100的数仍会正常运作
+
+```java
+import java.text.BreakIterator;
+import java.util.Scanner;
+public class if06 {
+    public static void main(String[] args) {
+        try (Scanner MyScanner = new Scanner(System.in)) {
+            System.out.print("Your mark?");
+            int mark = MyScanner.nextInt();
+        if (mark <=100 && mark>=0){
+            if (mark >= 80){
+                System.out.print("GoodMark");
+            }
+            else if (mark < 80 && mark >60){
+                System.out.print("OK");
+            }
+            else{
+                System.out.print("BadMark");
+            }
+        } else {
+            System.out.print("Wrong");
+        }
+        }
+        }
+    }
+```
+# 嵌套分支
+ - 基本介绍: 在一个分支结构中又完整的嵌套了另一个完整的分支结构, 里面的分支的结构成为内存分支, 外面的分支结构称为外层分支
+   - 不要超过三层
+ - 基本语法
+```java
+if(){
+  if(){
+    //if-else
+  } else{
+    //if-else
+  }
+}
+```
+ - 应用案例
+   - 如果分数大于8, pass
+   - 根据性别区分男女
+   - 输入成绩和性别, 进行判断和输出信息
+```java
+import java.util.Scanner;
+public class if07 {
+    public static void main(String[] args) {
+            Scanner MyScanner = new Scanner(System.in);
+            System.out.println("Your mark?");
+            double mark = MyScanner.nextDouble();
+            if (mark >= 10.0){
+                System.out.println("YourGender?");
+                char gender = MyScanner.next().charAt(0); 
+                if (gender=='m'){
+                    System.out.println("Male");
+                } else if (gender=='f'){
+                    System.out.println("Female");
+                } else {
+                    System.out.println("Wrong");
+                }
+            } else {
+                System.out.println("Not pass");
+            }
+            
+        }
+    }
+```
+
+> [!ATTENTION]
+> 遗留问题:
+>  - char类型, 换成GBK编码直接可以`男`, `女`, 但是英文就只能m和f
+>  - 改成String直接跑不动, 该怎么做?
+
+
+# Switch
+1. Switch 关键字, 表示switch分支
+2. 表达式对应一个值
+3. case常量1: 当表达式的值等于常量1, 就执行语句块1
+4. `break`: 表示退出switch
+5. 如果和case常量1匹配, 就执行语句块1, 如果没有匹配, 就继续匹配case常量2
+6. 如果一个都没配上, 就直接执行default
+
+```java
+switch{
+  case 常量1:
+  语句块1; // 多条或一条
+  break;
+  case 常量2;
+  语句块2;
+  break;
+  ...
+}
+
+
