@@ -1,250 +1,155 @@
-# 赋值运算符
+# 流程控制介绍:
+1. 顺序控制
+    - 介绍:
+      > 程序从上到下逐行的执行, 中间没有任何判断和跳转
+    - Java定义变量的时候采用的合法的**向前引用**. 如:
+    - `int1 = 12, int num2 = num 1+2`
+    - `int num2 = num1 +2; int num1 = 12` 错误
+2. 分支控制 if-else 介绍
+### 单分支基本语法:
+      ```java
+      if(条件表达式){
+        执行代码块;
+      }
+      ```
+      表达式为true的时候, 就会执行{}内的代码. 如果为false, 就不执行.
 
-***
-#### 介绍:
- - 赋值运算符就是把某个运算后的值, 赋给程序所指定的特定变量
-
-#### 分类:
- - 基本赋值运算符 `=`
-
-```java
-int a = 10
-```
-- 复合赋值运算符
-  - `+=`, `-=`, `*=`, `%=`, etc
-  - `a += b;` [等价于 `a=a+b`]
-  - `a -=b;` [等价于 `a = a-b;`]
-
-#### 实例演示
-```java
-int n1 = 10;
-n1 += 4;// n1 = n1 + 4;
-System.out.println(n1); // 14, 因为上述的公式
-
-
-int n2 = 10;
-n2 /= 3;// n1 = n1 / 3; 答案为3, 没有小数
-System.out.println(n2); // 3
-```
-
-```java
-//复合赋值运算符会进行类型转换
-byte b = 3;
-b += 2; // 等价 b = (byte)(b + 2);
-b++; // b = (byte)(b+1);
-```
-
-#### 赋值运算符的特点
-1. 运算顺序从右往左: `int num = a+b+c`
-2. 赋值运算符的左边只能说变量, 右边可以是表达是, 变量, 或者常量值</br> `int num = 20;`</br> `int num2 = 78*34-10;` </br> `int num3 = a;`
-3. 赋值运算符等价于: </br> `a+=3;` 等价于 `a = a+3;` 以此类推, 运算符都是一样的
-4. 复合赋值运算符会进行类型的转换:</br> `byte b=2;`</br>`b+=3;`</br>`b++;`
-
-> [!NOTE]
-> 复习的时候要是看到这里写不出来, 去看看note_hard
-
-# 三元运算符
-
-***
-
-#### 基本语法:
- - `条件表达式 ? 表达式1 : 表达式2`
- - **运算规则:**
-   - 如果条件表达式为true, 运算后的结果是表达式1;
-   - 如果条件表达式为false, 运算后的结果是表达式2;
-#### 案例演示:
-```java
-// 设a等于10; b等于99;
-int result = a > b ? a++ : b--;
-System.out.println("result=" + result); 
-System.out.println("a=" + a); 
-System.out.println("b=" + b);
-// result=99, a=10, b=98;
-```
-- 解读: 
-  1. a>b 为false
-  2. 因此, 先返回了b的值, 后续再b--
-  3. 返回的结果是99
-
-> [!NOTE]
-> 表达式1, 和表达式2 要为可以赋给接收变量的类型(或者额可以自动转换)
-> 三元运算符可以转换成if else语句(其实这个更简单好懂一点)
-
- - 三元表达式: 
-```java
-int res a>b? a++ : --b;
-```
- - if-else表达式:
-
-```java
-if (a>b) result = a++
-else result = --b
-```
- - 表达式细节
-```java
-int a = 3;
-int b = 8;
-int c = a>b?(int)1.1:(int)3.4; // 可以的, 强制转换数据类型
-double d = a>b?a:b+3; // 可以的的, 满足数据自动转换类型表
-// 详情看前面的自动数据转换和强制数据转换
-```
-#### 实战练习
-
-- 实现三个数的最大值: `int n1 = 553;` `int n2 = 33;` `int n3 = 123;`
-
-自己的思路梳理:
-1. 分别排序: 先看n1 & n2 谁大, 谁大就谁和n3进行比较
-2. 分类排序: compare n1 and n2, n2 and n3, n3 and n1(但是效率太满, 会占用大量内存)
-```java
-int n1 = 553;
-int n2 = 33;
-int n3 = 123;
-int max1 = n1>n2?n1:n2;
-int max_all = max1>n3?max1:n3;
-System.out.println(max_all);
-```
-一遍过!
-看看老师怎么写的 - 几乎一模一样
-> [!ATTENTION]
-> 后续有更好的办法, 效率更高, **排序**
-
-
-```java
-int max = (n1 > n2 ? n1 : n2) > n3 ? //
-(n1 > n2 ? n1 : n2) : n3;
-System.out.println("最大数=" + max);
-```
-
-![pic-computingRankTable](./pic/pic-computingRankTable.png)
-
-# 键盘输入语句
- - 介绍:
-   - 编程中, 需要接受用户输入的数据, 就可以使用键盘输入语句来获取. 
-   - `Input.java`, 需要一个扫描器对象: `Sacanner`
- - 步骤：
-   - 导入该类的所在包: `Java.util`
-   - 创建该类对象(声明变量)
-   - 调用功能
-
-
-####　案例演示:
-要求: 从控制台接受用户信息(姓名, 年龄, 薪水)
-***
 ```java
 import java.util.Scanner;
-public class assign{
+public class if01 {
     public static void main(String[] args) {
-        Scanner MyScanner = new Scanner(System.in);
-        System.out.println("Yourname?");
-        String name = myScanner.next();
-        System.out.println("Yourage?");
+        // 编写一个程序, 判断人的年龄是否大于18岁
+        // 思路分析: 
+        // 1. 接受输入的年龄, 定义scanner对象
+        // 2. 保存年龄到变量
+        // 3. if判断, 并且输出
+        Scanner myScanner = new Scanner(System.in);
+        System.out.print("YourAge?");
         int age = myScanner.nextInt();
-        System.out.println("Yourmoney?");
-        double sal = myScanner.nextDouble();
-        System.out.println("Information:");
-        System.out.println("Name="+name+"age="+age+"money="+sal);
+        if (age>18){
+            System.out.print("Your age is larger than 18");
+        }
+        System.out.print("Continue...");
+    }
+}
+```
+### 双分支:
+   - 基本语法: 
+```java
+if(条件表达式){
+  执行代码块1;
+}
+else{
+  执行代码块2;
+}
+```
+ - 案例实战
+```java
+import java.util.Scanner;
+public class if02 {
+    public static void main(String[] args) {
+        Scanner myScanner = new Scanner(System.in);
+        System.out.print("YourAge?");
+        int age = myScanner.nextInt();
+        if (age>18){
+            System.out.print("Your age is larger than 18");
+        } else{
+            System.out.print("OK");
+        }
+        System.out.print("Continue...");
+    }
+}
+```
+ - 练习题
+1. 声明两个double型变量, 判断第一个大于10.0, 第二个小于20.0, print两数之和
+
+
+```java
+public class if03 {
+    public static void main(String[] args) {
+        
+        double num1 = 20.0d;
+        double num2 = 19.0d;
+        if (num1 > 10.0){
+            if (num2 < 20.0){
+                System.out.print(num1+num2);
+            } 
+        } 
+    }
+}
+```
+老师思路: 
+```java
+public class if03 {
+    public static void main(String[] args) {
+        
+        double num1 = 20.0d;
+        double num2 = 19.0d;
+        if (num1 > 10.0 && num2 < 20.0){
+                System.out.print(num1+num2);
+            } 
+        } 
+    }
+}
+```
+2. 定义两个变量int, 判断两者之和, 是否能又被3又被5整除
+
+ - 和老师一模一样
+```java
+public class if04 {
+    public static void main(String[] args) {
+        //定义两个变量int, 判断两者之和, 是否能又被3又被5整除
+        int num1 = 45;
+        int num2 = 15;
+        int su = num1 +num2;
+        if (su%3 == 0 && su%5 ==0){
+            System.out.print("Yes");
+        }else{
+            System.out.print("No");
+        }
     }
 }
 ```
 
-# **进制**
+3. 判断一个年份是否是闰年, 年份能被4整除, 但不能被100整除; 能被400整除
+```java
+public class if05 {
+    public static void main(String[] args) {
+        int year = 2004;
+        if (year%4==0 && year%100!=0){
+            if (year%400==0){
+        } System.out.print("yes");
+            }
+        }
+    }
+```
 
- - 基本介绍: 整数四种表达方式:
-> 二进制: 0,1; 满2进1; 以`0b`或`0B`开头
-> 十进制: 0-9; 满10进1.
-> 八进制: 0-7; 满8进1, 以数字`0`开头
-> 十六进制: 0-9, 以及A(10)到F(15). 满16进1, 以`0x`或`0X`开头表示, A-F不区分大小写
+**or**
 
 ```java
-//十进制:
-int n1 = 11
-//十六进制
-int n2: 0xB
-//八进制
-int n3 = 013
-//二进制
-int n4 = 0b1011
+public class if05 {
+    public static void main(String[] args) {
+        int year = 2004;
+        if (year%4==0 && year%100!=0 || year%400==0){
+        } System.out.print("yes");
+            }
+        }
 ```
-#### 转成十进制
-
-***
-
-###### 二进制转十进制:
- - **从最低位(右边)开始, 将每个位上的数提取出来, 乘以2的(位数-1)次方, 然后求和**
-`0b1011`
-$$ 0b1011 = 1*2^{1-1}+1*2^{2-1}+0*2^{3-1}+1*2{4-1} = 1+2+0+8 = 11 $$
-###### 八进制转十进制
- - **从最低位(右边)开始, 将每个位上的数提取出来, 乘以8的(位数-1)次方, 然后求和**
-`0234`
-$$ 0234 = 4*8^0 +3*8^1+2*8^2=4+24+128=156 $$
-###### 十六进制转十进制
-`0x23A`
- - **从最低位(右边)开始, 将每个位上的数提取出来, 乘以16的(位数-1)次方, 然后求和**
-$$ 0x23A = 10*16^0+3 * 16 ^ 1 + 2 * 16^2 = 10 + 48 + 512 = 570 $$
-
-***
-
-#### 十进制转其他进制
-
-***
-
-###### 十进制转二进制
- - 规则:  
-   - 将该数不断的除以2, 直到商为0.
-   - 之后把每步得到的余数倒过来, 就是对应的二进制数
- - 具体案例: 把 34 转换成二进制
-   - ![10](./pic/10.jpg)
-   - $34/2 = 17, 余0$
-   - $17/2 = 8, 余1$
-   - $8/2=4, 余0$
-   - $4/2=2, 余0$
-   - $2/2=1, 余0$
- - 把所有的数倒着看, 放在一起, 就成了: 
- - `0b100010`
-
-
-###### 十进制转八进制
- - 规则:
-   - 将该数不断除以 16，直到商为 0 为．
-   - 然后将每步得到的余数倒过来，就是对应的十六进制。
- - 具体案例：把131转成八进制
-   - 具体做法同上
-   - $131/8=16, 余3$
-   - $16/8=2, 余0$
-   - $2/8, 没法做$
- - 把所有的数倒着看, 放在一起, 就成了: 
-   - 0203
-
-
-
-###### 十进制转十六进制
- - 规则
-   - 将该数不断除以 16，直到商为 0 为止.
-   - 然后将每步得到的余数倒过来，就是对应的十六进制。
- - 具体案例: 把237转换成十六进制
-   - 具体做法同上. 
-   - $237/16=14,余13$
-
-
-###### 二进制转换成八进制
- - 规则: 
-   - 从低位开始,将二进制数每三位一组，转成对应的八进制数即可
- - 具体案例: 把0b11010101转换成八进制
-   - ob11(3)010(2)101(5) => 0325
-###### 二进制转换成十六进制
- - 规则: 
-   - 从低位开始，将二进制数每四位一组，转成对应的十六进制数即可
- - 具体案例: 把0b11010101转换成十六进制
-   - 0b1101(D)0101(5) = 0xD5
-###### 八进制数转换成二进制
- - 规则: 
-   - 将八进制数每 1 位，转成对应的一个 3 位的二进制数即可
- - 具体案例: 0237 转换成二进制
-   - 02(010)3(011)7(111) = 0b10011111
-###### 十六进制数转换成二进制
- - 规则: 
-   - 将十六进制数每 1 位，转成对应的 4 位的一个二进制数即可
- - 具体案例: 把0x23B转换成二进制
-   - 0x2(0010)3(0011)B(1011) = 0b1000111011
-
-今天到位运算了
+### 多分支
+ - 基本语法:
+```java 
+if (条件表达式){
+  执行代码块1;
+}
+else if(条件代码块){
+  执行代码块2;
+}
+else{
+  执行代码块3;
+}
+```
+> [!NOTE]
+>  - 当条件表达式1成立的时候, 立即执行代码块1
+>  - 如果表达式1不成立, 采取判断表达式2是否成立
+>  - 如果表达式2成立, 就执行代码块
+>  - 以此类推, 如果所有代码块都不成立, 就直接直接执行else的代码块
