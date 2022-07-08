@@ -333,6 +333,185 @@ public class Switch_1 {
    1. 表达式数据类型, 应该和case后常量类型抑制, 或可以自动转换成可以相互比较的类型
    2. switch中表达式的返回值必须是(byte, short, int, char, enum, String)
    3. case子句中的值必须是常量, 而不能是var
-   4. default
+   4. default子句是可选的, 当没有分配的case的时候, 执行default
+   5. break语句用来执行完一个case分支后使程序跳出switch语句块; 如果没break那就一直无视判断执行到句尾, 除非其中有一个break. 
+   ```java
+   double c = 1.1;
+   switch(c);//不对, 必须遵循第二条
+    case 1.1; //错误
+    System.out.print("OK");
+    break;
+    ```
+> ![NOTE]
+>  - 表达数据类型, 应该和case后到常量累心一致; 或者可以说自动转成可用相互比较多类型, 比如char和int
+>  - 如果没有default子句, 没任何对应上, 那就没有任何的输出
+> - 建议搭配上一个小标题一起看, 更容易看懂
 
+### Examples:
+1. **改变大小写**
+```java
+import java.util.Scanner;
+public class Switch_02 {
+    public static void main(String [] args) {
+        // use switch to transfer the lowercase letters 
+        // into capital letters.
+        
+        Scanner myScanner = new Scanner(System.in);
+        System.out.println("Please type in a lowercase letter");
+        char c1 = myScanner.next().charAt(0);
+        switch (c1) {
+            case 'a':
+                System.out.print("A");                
+                break;
+
+            case 'b':
+                System.out.print("B");                
+                break;
+            case 'c':
+                System.out.print("C");                
+                break;
+            case 'd':
+                System.out.print("D");                
+                break;
+            case 'e':
+                System.out.print("E");                
+                break;
+            case 'f':
+                System.out.print("F");                
+                break;
+        
+            default:
+                System.out.println("That's not we are supporing.");
+                break;
+        }
+    }
+}
+```
+2. **对于学生成绩大于60分的, 输出合格, 低于的不合格**
+```java
+import java.util.Scanner;
+public class Switch_3 {
+    public static void main(String[]args) {
+        Scanner myScanner = new Scanner(System.in);
+        System.out.println("Please type in your grade");
+        double score = myScanner.nextDouble();
+        if (score >= 0 && score <=100){
+            switch ((int)(score/60)) {
+                case (1):
+                    System.out.println("Yes");
+                    break;
+                case (0):
+                    System.out.println("No");
+                    break;
+                default:
+                    System.out.println("Error");
+                    break;
+        }
+    }
+    }
+}
+
+```
+
+ - 这里用了一个反过来的判断, 把输入的double量强制转换成int再除以60, 和0/1进行对比, switch出结果
+ 3. **根据指定月份print输入月份所在的季节**
+ - 如果用if来写: 
+```java
+import java.util.Scanner;
+
+import javax.lang.model.element.Element;
+public class Switch_4 {
+    public static void main(String[]args) {
+        Scanner myScanner = new Scanner(System.in);
+        System.out.println("Put a month number here");
+        int month = myScanner.nextInt();
+        if (month >= 2 && month <=4){
+            System.out.println("Spring");
+        } else if(month >=6 && month <=8){
+            System.out.println("Summer");
+        } else if(month >=9 && month <= 11){
+            System.out.println("Fall");
+        } else{
+            System.out.println("Winter");
+        }
+    }
+}
+```
+ - 如果用switch写:
+```java
+import java.util.Scanner;
+
+import javax.lang.model.element.Element;
+public class Switch_4 {
+    public static void main(String[]args) {
+        Scanner myScanner = new Scanner(System.in);
+        System.out.println("Put a month number here");
+        int month = myScanner.nextInt();
+        switch (month) {
+            case 3:
+            case 4:
+            case 5:
+                System.out.println("Spring");
+                break;
+            case 6:
+            case 7:
+            case 8:
+                System.out.println("Summer");
+                break;
+            case 9:
+            case 10:
+            case 11:
+                System.out.println("Autumn");
+                break;
+            case 12:
+            case 1:
+            case 2:
+                System.out.println("Winter");
+                break;
+            default:
+                System.out.println("Wrong");
+                break;
+        }
+    }
+}
+```
+ - **switch和if的比较**
+   - 如果判断的具体数值不多, 而且符合byte, short, int, char, enum, String这几种类型, 建议使用Switch
+   - 如果是对区间进行判断, 对结果为布尔值类型进行判断, 那么建议使用if
+
+ ### `for`循环执行
+  - **基本语法**
+```java
+for (循环变了初始化; 循环条件; 循环变量迭代){
+    循环操作(可以多条语句);
+}
+```
+
+> [!Note]
+>  - for关键字, 表示循环控制
+>  - for有四要素:
+>   - 循环变量初始化
+>   - 循环条件
+>   - 循环操作
+>   - 循环变量迭代
+>  - 循环造作, 这里可以有条掉语句
+>  - 如果循环操作只有一条语句, 就可以省略了w
+>    - 但是建议别, 看着乱七八糟, 应该是不符合代码规范
+
+ - The Process of `For`
+
+```java
+public class for1 {
+    public static void main(String[]args) {
+    
+    for (int i =1; i <=10;i++){
+        System.out.println("Tien, nmsl");
+        }
+    }
+}
+```
+
+1. 首先执行循环变量的初始化
+2. 随后对循环条件进行判断
+   1. 如为false, 
 
