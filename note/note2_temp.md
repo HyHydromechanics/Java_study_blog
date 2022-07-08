@@ -281,5 +281,58 @@ switch{
   break;
   ...
 }
+```
+### 主要流程图
+
+![switch_way](./pic/switch_way.png)
+
+ - 计算机首先计算表达式的值
+   - 和常量1进行匹配, 如果匹配
+     - 执行语句块1
+     - 如果没有break, 直接执行语句块2
+       - 这里的执行是不进行与常量块2的判断的
+   - 如果和常量1不匹配, 判断和常量2
+     - 执行语句块2
+     - 如果没有break, 继续**穿透**
+   - 如果两个都不匹配, 那就执行`default`语句块
+   - 如果后续有`break`语句, 那就退出该程序
+
+> ![ATTENTION]
+> 后面可能是英文写了, mac符号切换太伞兵
+
+### The Branch Selection of `Switch`
+
+```java
+import java.util.Scanner;
+public class Switch_1 {
+    public static void main(String[]args) {
+/*
+ * Goal: write a program, when a~g is input in the termal, return: monday...
+ * Analysis: 
+ */
+        Scanner myScanner = new Scanner(System.in);
+        System.out.println("Please type in a number");
+        char c1 = myScanner.next().charAt(0);
+        // In java, as long as there's a return of value, it is considered as a function
+        switch (c1) {
+            case 'a':
+                System.out.println("Today is Monday");
+                break;
+            case 'b':
+                System.out.println("Today is Tuesday");
+            default:
+                System.out.println("You've put a wrong number");
+                break;
+        }
+    }
+}
+```
+
+### Details about `Switch`
+ - **注意事项和细节讨论:**
+   1. 表达式数据类型, 应该和case后常量类型抑制, 或可以自动转换成可以相互比较的类型
+   2. switch中表达式的返回值必须是(byte, short, int, char, enum, String)
+   3. case子句中的值必须是常量, 而不能是var
+   4. default
 
 
