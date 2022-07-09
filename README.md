@@ -17,6 +17,9 @@
 > __本站为hydromechanics的*Java*学习博客__ 
 > 学习使用版本:`Java 8`
 
+> [!ATTENTION]
+> _核心编程思想:_
+> **化繁为简** & **化死为活** 
 
 > [Java学习路线-整理by程序员鱼皮](.\assets\res\Java学习路线.md)
 
