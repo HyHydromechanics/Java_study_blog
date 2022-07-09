@@ -1991,13 +1991,15 @@ public class dowhile3 {
 
 ```java
 for (int i = i; i<=7; i++){
-  for (intj=1; j<=2; j++){
+  for (int j=1; j<=2; j++){
     System.out.print("OK") // 7*2 = 14
   }
 }
 ```
+ - 满了以后就会重置
+
 
 > [!NOTE]
 > 最多套三层娃, 太多了自己都看不懂
 
-
+到mutiforexercise 01
