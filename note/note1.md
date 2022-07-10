@@ -175,7 +175,7 @@ char word = 'w';
 写程序的时候在系统内存, 执行时进入内存中的program区, 数据暂存数据(Data)区.
 
 
- 
+
 #### 声明常量(一直不会改变的量, 也叫 final 常量)
 
 - 声明要指定数据类型 + final关键字
@@ -1458,7 +1458,7 @@ switch{
    - 如果两个都不匹配, 那就执行`default`语句块
    - 如果后续有`break`语句, 那就退出该程序
 
-> ![ATTENTION]
+> [!ATTENTION]
 > 后面可能是英文写了, mac符号切换太伞兵
 
 ### The Branch Selection of `Switch`
@@ -1502,7 +1502,7 @@ public class Switch_1 {
     case 1.1; //错误
     System.out.print("OK");
     break;
-    ```
+   ```
 > ![NOTE]
 >  - 表达数据类型, 应该和case后到常量累心一致; 或者可以说自动转成可用相互比较多类型, 比如char和int
 >  - 如果没有default子句, 没任何对应上, 那就没有任何的输出
@@ -1748,7 +1748,7 @@ public class for_work1 {
     System.out.println("Sum is: "+ s um);
     }
 }
-``` 
+```
 
 > [!NOTE]
 > 1. 输出1~100的数
@@ -2065,3 +2065,46 @@ public class multiFor2{
 
 3. 金字塔:
 
+```java
+*
+**
+***
+****
+*****
+```
+
+```java
+?????*
+????***
+???*****
+??*******
+?*********
+***********
+```
+
+```java
+import java.util.Scanner;
+
+public class Star1 {
+    public static void main(String[] args) {
+        //正立金字塔
+        int i, j, k, n;
+        Scanner input = new Scanner(System.in);
+        System.out.println("请输入金字塔的层数：");
+        n = input.nextInt();
+        //第一层循环控制金字塔的层数
+        for (i = 1; i <= n; i++) {
+            //第二层循环控制每行的空格数
+            for (j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+            //第二层循环控制每行的星星数
+            for (k = 1; k <= (2 * i - 1); k++) {
+                System.out.print("*");
+
+            }
+            System.out.print("\n");//输出完一层后换行
+        }
+    }
+}
+```
