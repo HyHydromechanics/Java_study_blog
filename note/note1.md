@@ -2003,6 +2003,48 @@ for (int i = i; i<=7; i++){
 > 最多套三层娃, 太多了自己都看不懂
 
 ### 多重循环控制 
-1. 计算三个班成绩的情况, 每个班有五名同学, 求出每个班的平均分和所有班级的平均分
-2. 统计出三个班⬆️的及格人数
-3. print出99乘法表
+1. 计算三个班成绩的情况, 每个班有五名同学, 求出每个班的平均分, 统计出没有及格人数
+
+```java
+import java.util.Scanner;
+public class mutifor1 {
+
+    public static void main(String[]args) {
+        Scanner myScanner = new Scanner(System.in);
+        int student_num1;
+        int student_sum = 0;
+        int not_good = 0;
+        System.out.println("How many class?");
+        int classNum = myScanner.nextInt();
+        System.out.println("There's "+ classNum+ " class in total");
+        for (int classNum_for = 1; classNum_for<=classNum; classNum_for++){
+            System.out.println("Class"+ classNum_for);
+            // print class number
+            System.out.println("How many students?");
+            student_num1 = myScanner.nextInt();
+            // count stud_net number
+
+            for (int i = 1;i<=student_num1;i++){
+                // for circle
+                System.out.println("Student's Grade?"); 
+                // student grade record
+                int student_grade = myScanner.nextInt(); 
+                student_sum += student_grade;
+                // sum up student grade
+                // judge not_good student number
+                if (student_grade <= 6){
+                    not_good++;
+                } else {
+                    continue;
+                }
+            }
+
+            System.out.println("Class "+ classNum_for + "'s sum is = "+student_sum/classNum_for);
+            System.out.println(classNum_for + " class average "+ "is = "+student_sum/student_num1/classNum_for);
+            System.out.println("There's "+ not_good + " student in Class " + classNum_for + " is not good at this");
+    }
+    }
+}
+```
+
+2. print出99乘法表
