@@ -2048,3 +2048,20 @@ public class mutifor1 {
 ```
 
 2. print出99乘法表
+```java
+public class multiFor2{
+    public static void main(String[] args){
+        int i=1;
+        int j=1;
+
+        for(i=1;i<=9;i++){
+            for(j=1;j<=i;j++){
+                System.out.print(j+"*"+i+"="+i*j+"\t");
+            }
+            System.out.println();
+        }}
+}
+```
+
+3. 金字塔:
+
