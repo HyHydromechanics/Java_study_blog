@@ -2081,7 +2081,8 @@ public class multiFor2{
 ?*********
 ***********
 ```
-
+ - 正立金字塔
+ - 
 ```java
 import java.util.Scanner;
 
@@ -2108,4 +2109,5 @@ public class Star1 {
     }
 }
 ```
+
 
