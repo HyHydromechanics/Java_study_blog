@@ -2148,3 +2148,154 @@ public class breakTest {
 }
 ```
 
+> [!NOTE]
+> `break` 只是结束循环, 不是退出程序
+
+### Details
+
+1. break语句出现在多层嵌套的语句块中时, 可以通过标签指明要终止的是哪一层的语句块
+
+ - break 语句可以由程序员指定推出哪一层, 
+ - 实现方法是label
+ - 但是实际开发中少用标签
+ - 如果没有指定的break, 默认推出最近的循环体
+
+### 实战:
+
+1. 1-100以内的数字求和, 求出当和第一次大于20的当前数
+```java
+public class breakWork {
+    public static void main(String[]args){
+        int sum = 0;
+        for (int i = 1; i<=100; i++){
+            sum +=i;
+            if (sum>20){
+                System.out.println("i = "+i);
+                break;
+            }
+        }
+    }
+}
+```
+
+
+2. 实现登录验证, 用户名为a, 密码为aaa就成功, 不然提示还有几次机会, 并且在第三次的时候终止循环
+```java
+import java.util.Objects;
+import java.util.Scanner;
+
+public class breakLogin {
+    public static void main(String []args){
+        Scanner myScanner = new Scanner(System.in);
+        String userName = "a";
+        String passWord = "aaa";
+        int chance = 3;
+
+        do{
+            System.out.println("Username?");
+            String userNameAnswer = myScanner.next();
+
+            if (!Objects.equals(userNameAnswer, userName)){
+                System.out.println("User name incorrect");
+                chance--;
+                System.out.println("You still have "+chance+ " times of chance");
+            } else {
+                System.out.println("Password?");
+                String passWordAnswer = myScanner.next();
+                if (!Objects.equals(passWordAnswer,passWord)){
+                    System.out.println("password incorrect");
+                    chance--;
+                    System.out.println("You still have "+chance+ " times of chance");
+                } else {
+                    System.out.println("Welcome, " + userName);
+                    break;
+                }}
+        } while (chance >=1);
+
+    }
+}
+```
+
+
+ - 改进版本: 增加注册账号的作用, 与密码注册确认, 如果密码不同, 就关闭程序, 如果密码相同, 返回登陆界面
+
+```java
+import java.util.Objects;
+import java.util.Scanner;
+
+public class breakLogin {
+    public static void main(String []args){
+        Scanner myScanner = new Scanner(System.in);
+        String userName = "root";
+        String passWord = "root";
+        int login = 1;
+        int register = 2;
+        int chance = 3;
+        System.out.println("What do you want? press 1 for login, press 2 for register");
+        int choose = myScanner.nextInt();
+        if (choose == register) {
+            System.out.println("You've encounter in the register system");
+            System.out.println("Now, you shall create a account:");
+            System.out.println("Write your username");
+            String userNameNew = myScanner.next();
+
+            System.out.println("Write your password:");
+            String passWordNew = myScanner.next();
+            System.out.println("Write your password again to confirm");
+            String passWord2 = myScanner.next();
+            if (passWordNew.equals(passWord2)){
+                do {
+                    System.out.println("Back to login System...");
+                    System.out.println("Username?");
+                    String userNameAnswer = myScanner.next();
+
+                    if (!Objects.equals(userNameAnswer, userNameNew)) {
+                        System.out.println("User name incorrect");
+                        chance--;
+                        System.out.println("You still have " + chance + " times of chance");
+                    } else {
+                        System.out.println("Password?");
+                        String passWordAnswer = myScanner.next();
+                        if (!Objects.equals(passWordAnswer, passWordNew)) {
+                            System.out.println("password incorrect");
+                            chance--;
+                            System.out.println("You still have " + chance + " times of chance");
+                        } else {
+                            System.out.println("Welcome, " + userNameNew);
+                            break;
+                        }
+                    }
+                } while (chance >= 1);
+            }
+            else {
+                System.out.println("Password Wrong, program break");
+            }
+            // login
+        } else if (choose == login){
+            do {
+                System.out.println("Username?");
+                String userNameAnswer = myScanner.next();
+
+                if (!Objects.equals(userNameAnswer, userName)) {
+                    System.out.println("User name incorrect");
+                    chance--;
+                    System.out.println("You still have " + chance + " times of chance");
+                } else {
+                    System.out.println("Password?");
+                    String passWordAnswer = myScanner.next();
+                    if (!Objects.equals(passWordAnswer, passWord)) {
+                        System.out.println("password incorrect");
+                        chance--;
+                        System.out.println("You still have " + chance + " times of chance");
+                    } else {
+                        System.out.println("Welcome, " + userName);
+                        break;
+                    }
+                }
+            } while (chance >= 1);
+
+        }
+
+    }
+}
+```
