@@ -2299,3 +2299,43 @@ public class breakLogin {
     }
 }
 ```
+
+# continue - 跳转控制语句
+
+ - 基本介绍:
+   - continue语句用于结束本次循环, 继续执行下一次循环
+   - continue语句出现在多层嵌套的循环语句体中的时, 可以通过标签指明要跳过的是哪一层循环
+
+ - 基本语法:
+
+```java
+{
+    ...
+    continue;
+    ...
+}
+```
+**continue用于结束本次循环, 继续下次循环**
+
+### 例子
+
+```java
+public class continue1 {
+    public static void main(String[]args){
+        int i = 0;
+        while (i<=4){
+            i++;
+            if (i ==2){
+                continue;
+            }
+            System.out.println("i = "+ i);
+        }
+    }
+}
+```
+
+### Details
+
+ - 细节分析:
+
+

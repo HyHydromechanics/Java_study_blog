@@ -11,6 +11,7 @@ public class breakLogin {
         int chance = 3;
         System.out.println("What do you want? press 1 for login, press 2 for register");
         int choose = myScanner.nextInt();
+
         if (choose == register) {
             System.out.println("You've encounter in the register system");
             System.out.println("Now, you shall create a account:");
@@ -47,6 +48,7 @@ public class breakLogin {
             }
             else {
                 System.out.println("Password Wrong, program break");
+
             }
             // login
         } else if (choose == login){
