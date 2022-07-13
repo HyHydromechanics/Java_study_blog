@@ -2110,4 +2110,41 @@ public class Star1 {
 }
 ```
 
+> [!NOTE] 这里还是不太确定, 回头再想
+
+# Break
+
+ - 需求: 随机生成1-100的一个数, 直到生成了97这个数
+
+ - 思路分析: 
+   - 循环, 但是不知道具体循环了多少次. 
+   - 要是满足某个条件的时候, 使用break来终止循环
+
+
+ - 基本语法: 
+   - 用于种植某个语句块的执行, 一般使用在switch或者循环(for, while, do-while) 中
+
+```java
+{
+    ...
+    break;
+    ....
+}
+```
+
+
+### Examples
+
+```java
+public class breakTest {
+    public static void main(String []args){
+        for (int i = 0; i<10; i++){
+            if (i == 3){
+                break;
+            }
+            System.out.println(i);
+        }
+    }
+}
+```
 

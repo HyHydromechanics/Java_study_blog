@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class assign{
     public static void main(String[] args) {
-        Scanner MyScanner = new Scanner(System.in);
+        Scanner myScanner = new Scanner(System.in);
         System.out.println("Yourname?");
         String name = myScanner.next();
         System.out.println("Yourage?");
