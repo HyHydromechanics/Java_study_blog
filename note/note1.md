@@ -2336,6 +2336,42 @@ public class continue1 {
 
 ### Details
 
- - 细节分析:
+ - **细节分析:**
+
+ - 思考下面代码的该用continue的不同会造成什么不同?
+
+```java
+public class continue2 {
+    public static void main(String[]args){
+        int j = 0;
+        label1:
+        for(; j<4;j++){
+            label2:
+            for(int i = 0; i<10;i++){
+                if (i==2){
+                    //continue;
+                    //continue label 1;
+                    //continue label 2;
+                }
+                System.out.println("i="+i);
+            }
+        }
+    }
+}
+```
+
+> 如果用`continue`:
+> 那就是四遍的1~9
+> continue2同理, 因为这就是continue的本质
+
+> 如果用`continue1`:
+> 那么就是四遍的0和1.
+
+
+# Return
+
+ - 介绍: 
+   - return使用在方法, 表示跳出所在的方法.
+   - 如果return写在main(祝方法), 则直接退出程序
 
 
