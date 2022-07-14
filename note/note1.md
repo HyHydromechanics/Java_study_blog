@@ -2374,4 +2374,19 @@ public class continue2 {
    - return使用在方法, 表示跳出所在的方法.
    - 如果return写在main(祝方法), 则直接退出程序
 
+```java
+public class return1 {
+    public static void main(String[]args){
+        for (int i = 1; i <= 5; i++){
+            if (i ==3){
+                System.out.println(i);
+                continue;
+            }
+            System.out.println("H");
+        }
+        System.out.println("A");
+    }
+}
+```
+看看使用`break`, `continue`, `continue`; 输出有什么不一样
 

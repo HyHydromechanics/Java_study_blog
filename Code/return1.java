@@ -3,9 +3,10 @@ public class return1 {
         for (int i = 1; i <= 5; i++){
             if (i ==3){
                 System.out.println(i);
-                break;
-                //return;
+                continue;
             }
+            System.out.println("H");
         }
+        System.out.println("A");
     }
 }
