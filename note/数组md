@@ -1,0 +1,38 @@
+# 数组
+***
+
+# 介绍:
+
+ - 可以存放多个同一类型的数据.
+ - 数组也是一种数据类型, 是引用类型.
+ - 也就是说: 数(数据)组(一组)就是一组数据
+
+
+```java
+double[] hens = {3, 4, 5, 6, 9, 0};
+```
+1. `double[]` 表示 是double类型的数组, 数组名是hens
+2. `{}`内的是表示数组的值/元素, 依次表示数组的第几个元素
+3. 我们可以通过`hens[下标]` 来访问数组中的元素
+   1. 下标是从0开始编号的, hens数组的0号就是3. 1号就是第二个数字, 也就是4, vice versa.
+4. 通过for循环就可以对数组进行循环的访问
+5. 通过定义一个新的变量+=来实现元素的累积
+
+```java
+public class array1 {
+    public static void main (String[]args){
+        double[] hens = {3, 4, 5, 6, 9, 0};
+        double totalWeight = 0;
+        for (int i = 0; i<=5; i++){
+            System.out.println(hens[i]);
+            totalWeight += hens[i];
+        }
+        System.out.println(totalWeight);
+        System.out.println(totalWeight/hens.length);
+    }
+}
+```
+> 注意, 如果`i`超过了数组的量, 那么会抛出异常
+> `Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException`
+6. 可以通过`数组名.length`来的到数组的大小
+7. 
