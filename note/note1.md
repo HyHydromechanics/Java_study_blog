@@ -2390,3 +2390,166 @@ public class return1 {
 ```
 看看使用`break`, `continue`, `continue`; 输出有什么不一样
 
+# 实战
+
+1. 一个人有100000块钱, 如果钱比50000多, 过一次收取百分之五, 如果少, 收取1000, 看最后能过几个路口
+```java
+public class circleWork1 {
+    public static void main(String []args){
+        double money = 100000;
+        System.out.println("You have " + money +" now");
+        int i = 0;
+        while (true){
+            if (money>50000){
+                // money = money-money*0.05;
+                money *= 0.95;
+                i++;
+
+
+            } else if (money >= 1000) {
+                money = money -1000;
+                i++;
+
+            }
+            else {
+                System.out.println(i);
+                System.out.println(money);
+                break;
+            }
+        }
+    }
+}
+```
+2. 判断一个整数: 大于零, 小于0, 等于0
+
+```java
+import java.util.Scanner;
+public class circleWork2 {
+    public static void main(String []args){
+        Scanner myScanner = new Scanner(System.in);
+        System.out.println("Put a number here");
+        double num = myScanner.nextDouble();
+        if (num>0){
+            System.out.println("Bigger than 0");
+        } else if (num == 0){
+            System.out.println("Equal to 0");
+        } else {
+            System.out.println("Less than 0");
+        }
+    }
+}
+```
+
+3. 判断一个年份是不是闰年
+```java
+import java.util.Scanner;
+public class circleWork3 {
+    public static void main(String []args){
+        Scanner myScanner = new Scanner(System.in);
+        System.out.println("Put a year here");
+        double year = myScanner.nextDouble();
+        if (year%4==0){
+            System.out.println("Yes");
+        } else System.out.println("no");
+
+    }
+}
+```
+
+4. 判断一个数是不是水仙花数, 所谓水仙花数就是指一个三位数, 其各个位数上的三次方等于7其本身, 比如 $153 = 1*1*1 + 5*5*5 + 3*3*3$
+
+```java
+import java.util.Scanner;
+public class circleWork4 {
+    public static void main(String []args){
+        Scanner myScanner = new Scanner(System.in);
+        System.out.println("Put a Narcissistic number here");
+        int nNumber = myScanner.nextInt();
+        int a = (int) (nNumber/100);
+        int b = (int) ((nNumber-a*100)/10);
+        int c = (int) (nNumber - a * 100 - b * 10);
+        if (a*a*a+b*b*b+c*c*c == nNumber){
+            System.out.println("YES");
+
+        } else System.out.println("No");
+    }
+}
+```
+
+5. 输出1-100之间不能被5整除的数, 5个一行
+
+```java
+public class circleWork5 {
+    public static void main(String []args){
+        int a = 1;
+        for (int i = 0;a<=100;a++){
+            if (a%5!=0){
+                System.out.print(a+ " ");
+                i++;
+                if (i == 5){
+                    i = 0;
+                    System.out.println(" ");
+                }
+            }
+        }
+    }
+
+}
+```
+
+6. 输出A~Z和z~a
+
+```java
+public class circleWork6 {
+    public static void main(String []args){
+        int capitalLetter = 65;
+        int lowercaseLetter = 122;
+        for (;capitalLetter<=90;capitalLetter++){
+            System.out.println((char)(capitalLetter));
+            }
+        for (;lowercaseLetter>=97;lowercaseLetter--){
+            System.out.println((char)(lowercaseLetter));
+        }
+    }
+}
+
+```
+
+7. 计算 $1 - 1/2 + 1/3 - 1/4 + 1/5.... - 1/100$
+
+```java
+public class circleWork7 {
+    public static void main(String []args){
+        double front = 1;
+        double sum = 0;
+        for (;front<=100;front++){
+            if (front%2 == 0){
+                sum -= 1/front;
+            } else if (front%2!=0) {
+                sum += 1/front;
+            }
+        }
+        System.out.println("Answer = " + sum);
+
+    }
+}
+```
+8. 求1+1+2+1+2+3+1+2+3+4...1+2+3+100的结果
+
+```java
+public class circleWork8 {
+    public static void main(String []args){
+        int num = 1;
+        double sum = 0;
+        double temp_sum = 0;
+        for (; num <=100; num++){
+
+            sum = (sum + num);
+            System.out.println(sum);
+            temp_sum += sum;
+        }
+        System.out.println("sum = " + temp_sum);
+    }
+}
+```
+
