@@ -6,6 +6,7 @@ public class array1 {
             System.out.println(hens[i]);
             totalWeight += hens[i];
         }
+        System.out.println("Length = " + hens.length);
         System.out.println(totalWeight);
         System.out.println(totalWeight/hens.length);
     }

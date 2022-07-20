@@ -2,6 +2,12 @@
 
 ***
 
+
+
+[TOC]
+
+***
+
 # 主类结构
 
 ```java
@@ -2390,7 +2396,7 @@ public class return1 {
 ```
 看看使用`break`, `continue`, `continue`; 输出有什么不一样
 
-# 实战
+### 实战
 
 1. 一个人有100000块钱, 如果钱比50000多, 过一次收取百分之五, 如果少, 收取1000, 看最后能过几个路口
 ```java
@@ -2591,4 +2597,139 @@ public class array1 {
 > 注意, 如果`i`超过了数组的量, 那么会抛出异常
 > `Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException`
 6. 可以通过`数组名.length`来的到数组的大小
-7. 
+
+
+```java
+public class array1 {
+    public static void main (String[]args){
+        double[] hens = {3, 4, 5, 6, 9, 0};
+        double totalWeight = 0;
+        for (int i = 0; i<=5; i++){
+            System.out.println(hens[i]);
+            totalWeight += hens[i];
+        }
+        System.out.println("Length = " + hens.length);
+        System.out.println(totalWeight);
+        System.out.println(totalWeight/hens.length);
+    }
+}
+```
+
+### 数组的使用
+ - 动态初始化
+   - 数据的定义: 
+     1. 数据类型: `数组名[] = new 数据类型[大小]` </n> 
+     ```java
+     int a[] = new [5]; //创建了一个数组, 名字a, 存放五个int数据
+     ```
+     2. 这是定义数组的一种方法, 可以用房间的对应来理解(名字叫a的楼层里的第一个房间, 当然数组里的1就是0)
+     3. 数组的引用(使用)
+        1. 数组名[下标/索引] 比如: 使用a数组的第三个数: `a[2]`
+
+
+ - 循环输入5个成绩, 保存到double数组, 并输出
+```java
+    import java.util.Scanner;
+public class array2 {
+    public static void main (String[]args){
+        //循环输入5个成绩, 保存到double数组, 并输出
+        Scanner myScanner = new Scanner(System.in);
+        double[] score = new double[5];
+        for (int i = 0; i<5; i++){
+            System.out.println("type the "+ (i+1)+ "'s value");
+            score[i] = myScanner.nextDouble();
+        }
+        for (int j = 0; j<score.length; j++){
+            System.out.println(score[j]);
+        }
+    }
+}
+```
+> 这时候idea出现警告, 说可以被替换成enhanced for
+> ![ideaMentionArray.png](./pic/ideaMentionArray.png)
+>
+> *那么更换后会变成什么样子呢?*
+```java
+for (double v : score) {
+            System.out.println(v);
+        }
+```
+> 或者说, 把for循环从1开始警告也会消失
+```java
+for (int j = 1; j<score.length; j++){
+    System.out.println(score[j])
+}
+```
+> 很明显, 这也就会少遍历一次0
+> 实际上, 因为循环里面的索引变量没有被用到，替换后更简洁。
+```java
+public voic function(int[] arr){
+    for(int i: arr){
+        System.out.print(i)
+    }
+}
+```
+> 迭代器是一种用于分离数据结构和遍历方式的设计模式，多在非线性数据结构定义不同遍历方式时使用（例如可以为一个二叉树提供dfs和bfs两种迭代方式，而这两种迭代方式的实现可以和二叉树自身实现分离)。
+
+***
+
+ - 使用方式2 - 动态初始化
+   - 先声明数组
+     - **语法**: 
+     - `数据类型[] 数组名;`
+     - `int[] a;`
+   - 创建数组
+     - **语法**: 数组名 = new 数据类型[大小]
+     - `a = new int[a]`
+   
+ - 演示
+   - 第一种
+    ```java
+     double[] score = new double[5];
+    ```
+   - 第二种 先声明后分配
+    ```java
+    double scores[];
+    scores = new double[5];
+    ```
+> 声明的时候还没有占用空间, 这时候 scores 是null
+> 当真正的new出来5点时候才是分配内存空间, 可以分配数据
+
+***
+- 使用方式3-静态初始化
+   - 初始化数组
+   - **语法**: `数据类型 数组名[] = (元素值, 元素值...)`
+   - `int a[](1,2,3,4,5)`
+
+   > 前提是你知道数组有多少元素与其具体值
+
+- 演示: 
+
+  ```java
+  double hens[] = (1,2,3,4,5,6);
+  ```
+
+  > 相对于一个一个点赋值会稍微简单一点
+
+***
+
+### 数组使用注意事项和细节
+
+1. 数组是多个相同类型数据的组合, 实现对这些数据的统一管理
+2. 数组中的元素可以是任何数据类型, 实现对这些数据的统一管理
+3. 数组创建后, 如果没有赋值, 有默认值 int 0, short 0...
+4. 使用数组的步骤
+   - 声明数组并开辟空间
+   - 给数组各个元素赋值
+   - 使用数组
+5. 数组下标是从0开始的
+6. 数组下标必须在指定范围内使用, 否则报错
+7. 数组属引用类型, 数组型数据是对象
+
+***
+
+### 数组应用案例
+
+1. 创建一个char类型的A-Z, 一共26个, 使用for循环访问所有元素并打印出来
+2. 请求出一个数组int[]的最大值{4, -1, 9, 10, 23}, 并且得到对应的下标
+3. 请求出一个数组的和和平均值
