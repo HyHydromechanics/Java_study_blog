@@ -2624,16 +2624,16 @@ public class array1 {
      ```
      2. 这是定义数组的一种方法, 可以用房间的对应来理解(名字叫a的楼层里的第一个房间, 当然数组里的1就是0)
      3. 数组的引用(使用)
-        1. 数组名[下标/索引] 比如: 使用a数组的第三个数: `a[2]`
+        - 数组名[下标/索引] 比如: 使用a数组的第三个数: `a[2]`
 
 
  - 循环输入5个成绩, 保存到double数组, 并输出
 ```java
-    import java.util.Scanner;
+import java.util.Scanner;
 public class array2 {
     public static void main (String[]args){
         //循环输入5个成绩, 保存到double数组, 并输出
-        Scanner myScanner = new Scanner(System.in);
+        Sfcanner myScanner = new Scanner(System.in);
         double[] score = new double[5];
         for (int i = 0; i<5; i++){
             System.out.println("type the "+ (i+1)+ "'s value");
@@ -2699,14 +2699,14 @@ public voic function(int[] arr){
 - 使用方式3-静态初始化
    - 初始化数组
    - **语法**: `数据类型 数组名[] = (元素值, 元素值...)`
-   - `int a[](1,2,3,4,5)`
+   - `int[] a= {1,2,3,4,5}`
 
    > 前提是你知道数组有多少元素与其具体值
 
 - 演示: 
 
   ```java
-  double hens[] = (1,2,3,4,5,6);
+  double[] hens = {1,2,3,4,5,6};
   ```
 
   > 相对于一个一个点赋值会稍微简单一点
@@ -2731,5 +2731,200 @@ public voic function(int[] arr){
 ### 数组应用案例
 
 1. 创建一个char类型的A-Z, 一共26个, 使用for循环访问所有元素并打印出来
+
+```java
+public class ArrayP1 {
+    public static void main(String[]args){
+        // 创建一个char类型的A-Z, 一共26个, 使用for循环访问所有元素并打印出来
+        char[] letter = new char[26];
+        char a = 97;
+        for (int i = 0; i<26; i++, a++ ){
+            letter[i] = a;
+            System.out.print(letter[i]);
+        }
+        for (int j = 0; j< 26; j++){
+            System.out.println(letter[j]);
+        }
+    }
+}
+```
+
+
+
 2. 请求出一个数组int[]的最大值{4, -1, 9, 10, 23}, 并且得到对应的下标
+
+```java
+public class ArrayP2 {
+    public static void main(String[] args) {
+        int[] array = {4, -1, 9, 10, 23};
+        int max = array[0];
+        int maxIndex = 0;
+        for (int i = 0; i<array.length; i++){
+            if (max < array[i]){
+                max = array[i];
+                maxIndex = i;
+                System.out.println("Now, max is " + max);
+            }
+        }
+        System.out.println("Max is " + max + "; MaxIndex = " + maxIndex);
+
+    }
+}
+```
+
+
+
 3. 请求出一个数组的和和平均值
+
+```java
+public class ArrayP3 {
+    public static void main(String[] args) {
+        int temp = 0;
+        int temp1 = 0;
+        int[] array = {1,2,3,4,5};
+        for (int i = 0; i < array.length; i++){
+            temp = array[i];
+            temp1 += temp;
+        }
+        System.out.println(temp1/array.length);
+        System.out.println(array.length);
+    }
+}
+
+```
+
+### 数组赋值机制
+
+**1. 基本数据类型赋值, 也就是具体数值赋值, 互相不影响的**
+
+```java
+int n1 = 2; int n2 = n1
+```
+
+**2. 数组在默认情况下使用时引用传递, 赋的值是地址(引用传达)**
+
+```java
+int[] arr1 = {1,2,3};
+int[] arr2 = arr1;
+```
+
+> 需要注意的是arr2的变化会影响到arr1
+
+***
+
+### 值传递和引用传递到区别
+
+
+
+![draft-array.png](./pic/draft-array.png)
+
+> 那么该怎么才能做到引用呢?
+
+- 将arr1 拷贝到arr2, 要求数据空间是独立的
+
+> 显然, 不能直接指示, 那样只是把arr2的地址指向arr1⬆️.
+>
+> 解决方法: ⬇️
+
+```java
+int arr1 = new int{1,2,3};
+int arr2 = new int[arr1.length];
+
+for (int i = 0; i < arr1.length; i++){
+    arr2[i] = arr1[i];
+}
+```
+
+- 那么这样的话, 就是在创建了新的array2的内存地址,这样就可以达到我们想要的: _独立内存空间_; 而不是 _只是指定同一地址_
+
+### 数组反转
+
+- **要求:** arr (1,2,3) -> arr (3,2,1)
+
+```java
+public class arrayReverse1 {
+    public static void main(String[] args){
+        int[] arr1 = new int[] {1, 2, 3};
+        int[] arr2 = new int[arr1.length];
+
+        for (int j = 0; j< arr1.length; j++) {
+            System.out.println(arr1[j]);
+        }
+        
+        System.out.println("====");
+
+        for (int i = 0; i < 3; i++){
+            arr2[(arr2.length-1)-i] = arr1[i];
+            System.out.println(arr2[(arr2.length-1)-i]);
+        }
+
+
+    }
+}
+```
+
+> 这里犯了傻错, 把null值赋值给arr1了(
+>
+> 以后注意
+
+- **具体分析**:
+  - arr1[0]和arr2[2]
+  - Arr1[1]和arr2[1]
+  - arr1[2]和arr2[0]
+    - 一对一转换
+
+***
+
+### 数组扩容
+
+
+
+- **要求: ** 实现动态的给数组添加元素效果, 实现对数组扩容
+  - 原始数组使用静态分配int[] arr = {1,2,3}
+  - 增加对元素4, 直接放在数组的最后arr = {1,2,3,4}
+  - 用户可以决定是否继续添加
+
+- **思路分析**
+
+  1. 定义初始数组int[]arr={1,2,3}//下标0-2
+
+  2. 定义一个新的数组int[]arrNew=new int[arr.length+1],A
+
+  3. 逼历arr数组，依次将arr的元素拷贝到arrNew数组
+
+  4. 将4赋给arrNew[arrNew.length-1]=4;把4赋给arrNew最后一个元素
+
+  5. 让arr指向arrNew;arr=arrNew;那么原来arr数组就被销毁
+
+  > 这是只能创建一个点版本
+
+```java
+import java.util.Scanner;
+
+public class arrayAdd1 {
+    public static void main(String[] args){
+        Scanner myScanner = new Scanner(System.in);
+
+        int[] arrOld = {1,2,3};
+        int[] arrNew = new int[arrOld.length+1];
+        for (int i = 0; i< arrOld.length; i++){
+            arrNew[i] = arrOld[i];
+            System.out.println(arrNew[i]);
+        }
+        System.out.println("===");
+        int temp = myScanner.nextInt();
+        arrNew[3] = temp;
+        
+        for (int i = 0; i< arrNew.length; i++){
+            System.out.println(arrNew[i]);
+        }
+    }
+}
+```
+
+> 这是能创建多个的版本
+
+```java
+
+```
+
