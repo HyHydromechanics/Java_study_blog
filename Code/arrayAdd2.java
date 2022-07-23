@@ -5,12 +5,21 @@ public class arrayAdd2{
         Scanner myScanner = new Scanner(System.in);
 
         int[] arrOld = {1,2,3};
-        int[] arrNew = new int[arrOld.length+1];
+
+        for (int i = 0; i< arrOld.length; i++){
+            System.out.println(arrOld[i]);
+        }
+        System.out.println("How many do you want to add: ");
+        int addNum = myScanner.nextInt();
+        int[] arrNew = new int[arrOld.length+addNum];
+
         for (int i = 0; i< arrOld.length; i++){
             arrNew[i] = arrOld[i];
             System.out.println(arrNew[i]);
         }
         System.out.println("===");
+
+        for
         int temp = myScanner.nextInt();
         arrNew[3] = temp;
 
