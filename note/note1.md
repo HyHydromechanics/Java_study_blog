@@ -3136,8 +3136,6 @@ public class bubbleSort {
 2. 再开辟空间: `数组名 = new类型[大小][大小]`
 3. 赋值: (int类型默认是0)
 
-### 实战:
-
 创建一个二维数组, 并输出
 
 | i/j  | j=0  | j=1  | j=2  |
@@ -3185,4 +3183,27 @@ public class TwoDimenArray2 {
 
 
 可以参考[上面](###快速)的例子
+
+遍历一个二维数组, 并得到和
+
+```java
+public class TwoDimensionalArray3 {
+    public static void main(String[] args){
+        int temp;
+        int temp_sum = 0;
+        int [][] arr = {{0,0,0,0,0,0},{0, 0, 1, 0, 0, 0},{0, 2, 0, 3, 0, 0},{0,0,0,0,0,0}};
+        for (int i = 0; i< arr.length; i++){
+            for (int j = 0; j<arr[i].length; j++){
+                temp = arr[i][j];
+                temp_sum = temp+ temp_sum;
+            }
+        }
+        System.out.println(temp_sum);
+    }
+}
+```
+
+### 实战/杨辉三角
+
+
 

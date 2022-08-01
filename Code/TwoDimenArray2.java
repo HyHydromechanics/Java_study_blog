@@ -15,6 +15,7 @@ public class TwoDimenArray2 {
                 arr[i][j] = i + 1;//赋值
             }
         }
+
         System.out.println("=====arr 元素=====");
         //遍历arr 输出
         for(int i = 0; i < arr.length; i++) {
