@@ -2993,5 +2993,77 @@ public class arrayAdd2{
 
 
 
+```java
+public class bubbleSort {
+    public static void main(String[] args){
+        int temp = 0;
+        int[] arr = {24,69,80,57,13};
+        for (int j = 0; j<4; j++){
+            if (arr[j] > arr[j+1]){
+                temp = arr [j];
+                arr [j] = arr [j+1];
+                arr [j+1] = temp;
+            }
+        }
+        System.out.println("==Round One==");
+        for (int i = 0; i < arr.length; i++){
+            System.out.println(arr[i]);
+        }
+        for (int j = 0; j<3; j++){
+            if (arr[j] > arr[j+1]){
+                temp = arr [j];
+                arr [j] = arr [j+1];
+                arr [j+1] = temp;
+            }
+        }
+        System.out.println("==Round Two==");
+        for (int i = 0; i < arr.length; i++){
+            System.out.println(arr[i]);
+        }
+    }
+}
+```
 
+This is the two round of Bubble Sort, but writer himself wanted to try another way: using a simperflied way
 
+> Basically, you can just repeat this process till the end of it: 
+>
+> The key point of it is to subtract one at each loop.
+
+```java
+public class bubbleSort {
+    public static void main(String[] args){
+        int temp = 0;
+        int times = 4;
+        int count_num = 1;
+        int[] arr = {24,69,80,57,13};
+        for (; times>0; times--, count_num++){
+            for (int j = 0; j<times; j++){
+                if (arr[j] > arr[j+1]){
+                    temp = arr [j];
+                    arr [j] = arr [j+1];
+                    arr [j+1] = temp;
+                }
+        }
+
+            System.out.println("==Round "+count_num+"==");
+            for (int i = 0; i < arr.length; i++){
+                System.out.println(arr[i]);
+            }
+        }
+    }
+}
+```
+
+> The thing need to notice is that: Bubble排序算法是一种效率相当低的算法
+
+# 查找
+
+- **介绍**
+
+  在Java中, 我们常用的查找有两种: 
+
+  1. 顺序查找
+  2. 二分查找
+
+- 案例演示
