@@ -5,6 +5,7 @@
 
 - Basic
   - [Note1](./note/note1)
+  - [Note2](./note/note2.md)
 
 - [Hard](./note/note_hard.md)
 

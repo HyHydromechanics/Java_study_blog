@@ -1,5 +1,3 @@
-import java.awt.*;
-
 public class TwoDimenArray2 {
     public static void main(String[] args){
 //        i = 0: 1
@@ -16,7 +14,7 @@ public class TwoDimenArray2 {
             }
         }
 
-        System.out.println("=====arr 元素=====");
+        System.out.println("=====arr=====");
         //遍历arr 输出
         for(int i = 0; i < arr.length; i++) {
             //输出arr 的每个一维数组
