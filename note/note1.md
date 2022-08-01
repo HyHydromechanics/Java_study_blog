@@ -3067,3 +3067,122 @@ public class bubbleSort {
   2. 二分查找
 
 - 案例演示
+
+  - 顺序查找:
+
+  ```java
+  import java.util.Scanner;
+  public class Search {
+      public static void main(String[] args){
+          int[] num = {1,2,3,4,5};
+          Scanner myScanner = new Scanner(System.in);
+          int numFind = myScanner.nextInt();
+  
+          for (int i = 0; i<num.length; i++){
+              if (numFind == num[i]){
+                  System.out.println(i);
+              }
+          }
+      }
+  }
+  ```
+
+  - 二分查找:
+
+
+
+# 二维数组
+
+### 快速
+
+- 应用场景: 五子棋
+
+- 什么是二维数组: 
+
+  - 定义上看: `int [][]`
+  - 原来的一位数组的每个元素都变成了一个数组, 就成了二维数组
+
+- 快速入门案例: 使用二维数组输出下面的图形
+
+  0 0 0 0 0 0
+
+  0 0 1 0 0 0
+
+  0 2 0 3 0 0 
+
+  0 0 0 0 0 0
+
+  ```java
+  public class TwoDimensionalArray1 {
+      public static void main(String[] args){
+          int [][] arr = {{0,0,0,0,0,0},{0, 0, 1, 0, 0, 0},{0, 2, 0, 3, 0, 0},{0,0,0,0,0,0}};
+          for (int i = 0; i< arr.length;i++){
+              for (int j = 0; j<arr[i].length; j++){
+                  System.out.print(arr[i][j]);
+              }
+              System.out.println();
+          }
+      }
+  }
+  ```
+
+### 内存分配
+
+![twodimentsion.png](./pic/twodimentsion.png)
+
+### 使用方法
+
+1. 先声明: `类型 数组名字[][]`
+2. 再开辟空间: `数组名 = new类型[大小][大小]`
+3. 赋值: (int类型默认是0)
+
+### 实战:
+
+创建一个二维数组, 并输出
+
+| i/j  | j=0  | j=1  | j=2  |
+| :--: | :--: | :--: | :--: |
+| i=0  |  1   |      |      |
+| i=1  |  2   | 2    |      |
+| i=2  |  3   | 3    | 3    |
+
+```java
+public class TwoDimenArray2 {
+    public static void main(String[] args){
+//        i = 0: 1
+//        i = 1: 2 2
+//        i = 2: 3 3 3
+        int [][] arr = new int[3][];
+        for(int i = 0; i < arr.length; i++) {//遍历arr 每个一维数组
+            // 给每个一维数组开空间new
+            // 如果没有给一维数组new ,那么arr[i]就是null
+            arr[i] = new int[i + 1];
+            //遍历一维数组，并给一维数组的每个元素赋值
+            for(int j = 0; j < arr[i].length; j++) {
+                arr[i][j] = i + 1;//赋值
+            }
+        }
+        System.out.println("=====arr 元素=====");
+        //遍历arr 输出
+        for(int i = 0; i < arr.length; i++) {
+            //输出arr 的每个一维数组
+            for(int j = 0; j < arr[i].length; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();//换行
+        }
+    }
+}
+```
+
+> 这里的重点是给数组空间new出来, 要不然就会出现空指针错误
+
+### 静态初始化
+
+1. 定义 `类型 数组名[][]` = {{1,2...},{1,2...}}
+2. 然后就可以直接用了
+
+
+
+可以参考[上面](###快速)的例子
+
