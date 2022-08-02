@@ -103,7 +103,7 @@ class Cat {
 ​	public protected 默认 private
 
 2. 属性的定义类型可以为任意类型, 包含基本类型或引用类型
-3. 属性如果不赋值, 有默认值, 规则和数组是一样的; (int,short,byte,long,都是0; float,double都是0.0; char \u0000, boolean false, String null)
+3. 属性如果不赋值, 有默认值, 规则和数组是一样的; (int,short,byte,long,都是0;  float,double都是0.0; char \u0000, boolean false, String null)
 
 ```java
 
@@ -146,4 +146,87 @@ cat = new Cat();
 Cat cat = newCat();
 ```
 
-// 到对象分配机制了
+### 如何访问属性
+
+- **基本语法:**
+
+    - 对象名, 属性名;
+
+- **类和对象的内存分配机制**
+
+    - 思考:
+
+    - ```java
+        Person p1 = new Person();
+        p1.age = 10;
+        p1.name = "Harry";
+        Person p2 = p1;
+        System.out.print(p2.age)
+        ```
+
+    - 在这种情况下的p2.age应该是多少?
+
+
+> **个人思考:**
+>
+> 这个本质上来讲和数组是一样的, 理论上都是把一个东西point toward to another thing, 那么`p2.age` will have no doubt same to p1.age
+
+![image-20220802102807228](./pic/image-20220802102807228.png)
+
+### 类和对象的内存分配机制
+
+***
+
+#### Java内存的结构分析
+
+- Stack - 栈: 一般存放基本数据类型(局部变量)
+- Heap - 堆: 存放对象(Cat cat, 数组等)
+- Method Area - 方法区: 常量池(常量, 比如字符串), 类加载信息
+- Map - 示意图: [Cat(name,age,price)]
+
+#### Java创建对象的流程分析
+
+```java
+Person p = new Person;
+p.name = "Harry";
+p.age = 18;
+```
+
+1. 先价值Person类的信息(属性和方法信息) - 只加载一次
+2. 在heap中分配空间, 进行默认初始化
+3. 把地址赋给`p`, `p`就指向对象
+4. 进行指定初始化, 比如`p.name - jack;`
+
+![image-20220802103615082](./pic/image-20220802103615082.png)
+
+![image-20220802103639977](./pic/image-20220802103639977.png)
+
+### 成员方法
+
+***
+
+#### 基本介绍:
+
+- 在部分情况下, 我们需要对成员方法进行定义, 比如如果把人类作为对象, 那么除了一些基本功能外, 人类还有一些复杂行为, 比如: 说话, 吃饭, 跑步...
+- 在这种情况下, 我们就需要成员方法来完成, 那么就需要对Person类完善
+
+#### 快速入门
+
+- 方法的调用
+
+    - 方法写好后, 如果不去调用, 那么就不会输出
+    - 先创建对象, 然后调用方法即可
+
+    - *`public` 表示方法是公开*
+    - `void`： 表示方法没有返回值*
+
+    - *`speak()` : speak 是方法名， **() 形参列表***
+        - `(int n)` 形参列表啊, 表示当前有一个形参n, 可以接受用户输入
+    - *`{}` 方法体，可以写我们要执行的代码*
+    - *`System.out.println("**");` 表示我们的方法就是输出一句话*
+    - *`(int sum1, int sum2)` 形参列表, 两个形参, 可以接受用户传入的两个数*
+    - 
+
+- 计算机一旦在main方法中发现了调用方法, 那么就会直接去对应类中去调用该方法, 也就是执行对应的语句块
+- 
+
