@@ -560,13 +560,66 @@ public class MethodParameter1 {
 
 class ww {
     public void swap(int a,int b){
-        System.out.println("\na和b交换前的值\na=" + a + "\tb=" + b);//a=10 b=20
+        System.out.println("a和b交换前的值a=" + a + "b=" + b);//a=10 b=20
         //完成了 a 和 b的交换
         int tmp = a;
         a = b;
         b = tmp;
-        System.out.println("\na和b交换后的值\na=" + a + "\tb=" + b);//a=20 b=10
+        System.out.println("a和b交换后的值a=" + a + "b=" + b);//a=20 b=10
     }
 }
 ```
+
+但是输出结果是: 
+
+![截屏2022-08-02 16.01.46](./pic/截屏2022-08-02 16.01.46.png)
+
+- **原因**
+
+<img src="./pic/image-20220802160342035.png" alt="image-20220802160342035" style="zoom:150%;" />
+
+- 在内存中, 栈都是独立存在的, 也就是说, 尽管a和b在swap栈中发生了交换, 但是问题是在main方法中并没有发生交换,因此输出仍旧是a=10, b=20
+
+- 基本数据类型, 传递的是*值*, 而形参的任何改变不影响实参
+
+
+
+```java
+
+public class MethodParameter02 { 
+	//编写一个main方法
+	public static void main(String[] args) {
+		//测试
+		B b = new B();
+		int[] arr = {1, 2, 3};
+		b.test100(arr);//调用方法
+		System.out.println(" main的 arr数组 ");
+		//遍历数组
+		for(int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + "\t");
+        }
+		System.out.println();
+
+	}
+}
+class B {
+	//B类中编写一个方法test100，
+	//可以接收一个数组，在方法中修改该数组，看看原来的数组是否变化
+	public void test100(int[] arr) {
+		arr[0] = 200;//修改元素
+		//遍历数组
+		System.out.println(" test100的 arr数组 ");
+		for(int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i] + "\t");
+		}
+		System.out.println();
+	}
+}
+```
+
+输出为都是一样的, 被修改后的arr数组
+
+![image-20220802162535538](./pic/image-20220802162535538.png)
+
+原因? 数组都是同一个堆, 因此就算不在同一个地方改, 也是一样的, 具体原因是在前面的数组有具体说
 
