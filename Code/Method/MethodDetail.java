@@ -1,5 +1,3 @@
-package Method;
-
 public class MethodDetail {
 
 

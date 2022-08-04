@@ -29,7 +29,7 @@ public class Switch_02 {
                 break;
         
             default:
-                System.out.println("That's not we are supporing.");
+                System.out.println("That's not we are supporting.");
                 break;
         }
     }
