@@ -13,7 +13,7 @@ public class Switch_02 {
                 break;
 
             case 'b':
-                System.out.print("B");                
+                System.out.print("b");
                 break;
             case 'c':
                 System.out.print("C");                

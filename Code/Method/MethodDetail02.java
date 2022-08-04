@@ -28,14 +28,14 @@ class A {
     public void m1() {
         //创建B对象, 然后在调用方法即可
         System.out.println("m1() 方法被调用");
-        B b = new B();
+        b b = new b();
         b.hi();
 
         System.out.println("m1() 继续执行:)");
     }
 }
 
-class B {
+class b {
 
     public void hi() {
         System.out.println("B类中的 hi()被执行");
