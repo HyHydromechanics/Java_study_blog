@@ -626,3 +626,107 @@ class B {
     - 尽管栈是相互独立的, 但是栈的内存指示, 也就是堆: 是完全相同的, 他们都直接指向堆, 而不在栈中直接运算
     - 因此, 相互独立的栈在修改后指向的数组也会变
 
+#### 成员方法返回类型是引用类型
+
+1. 编写一个方法, 可以打印二维数组
+
+    ```java
+    public class PrintTwoDimensionalArray {
+        public static void main (String[]args){
+            int [][] arr = {{0,0,1},{1,1,1},{1,1,3}};
+            printArray printArray = new printArray();
+            printArray.print2Array(arr);
+        }
+    }
+    class printArray{
+        public void print2Array(int [][]arr){
+            for (int i = 0; i< arr.length; i++){
+                for (int j = 0; j< arr.length; j++){
+                    System.out.print(arr[i][j]);
+                }
+                System.out.println();
+            }
+        }
+    }
+    ```
+
+2. 编写一个方法copyPerson，可以复制一个Person 对象，返回复制的对象。克隆对象， 注意要求得到新对象和原来对象是两个独立的对象，只是他们的属性相同
+
+```java
+public class MethodExercise02 {
+    //编写一个main 方法
+    public static void main(String[] args) {
+        Person p = new Person();
+        p.name = "milan";
+        p.age = 100;
+//创建tools
+        MyTools tools = new MyTools();
+        Person p2 = tools.copyPerson(p);
+//到此p 和p2 是Person 对象，但是是两个独立的对象，属性相同
+        System.out.println("p 的属性age=" + p.age + " 名字=" + p.name);
+        System.out.println("p2 的属性age=" + p2.age + " 名字=" + p2.name);
+//这里老师提示： 可以同对象比较看看是否为同一个对象
+        System.out.println(p == p2);//false
+    }
+}
+class Person {
+    String name;
+    int age;
+}
+class MyTools {
+    //编写一个方法copyPerson，可以复制一个Person 对象，返回复制的对象。克隆对象，
+//注意要求得到新对象和原来的对象是两个独立的对象，只是他们的属性相同
+//
+//编写方法的思路
+//1. 方法的返回类型Person
+//2. 方法的名字copyPerson
+//3. 方法的形参(Person p)
+//4. 方法体, 创建一个新对象，并复制属性，返回即可
+    public Person copyPerson(Person p) {
+//创建一个新的对象
+        Person p2 = new Person();
+        p2.name = p.name; //把原来对象的名字赋给p2.name
+        p2.age = p.age; //把原来对象的年龄赋给p2.age
+        return p2;
+    }
+}
+```
+
+![image-20220806082005013](./pic/image-20220806082005013.png)
+
+***
+
+### 方法递归(recursion)调用🌟
+
+- ***基本介绍**:* 递归就是自己调用自己, 每次调用的时候传入不同的变量, 方便变成解决复杂问题, 同时可以让代码变得简洁
+
+思考: 输出什么?
+
+```java
+public class Recursion1 {
+    public static void main (String[]args){
+        recursion1Test recursion1Test = new recursion1Test();
+        recursion1Test.test(4);
+    }
+}
+
+class recursion1Test{
+    public void test(int n){
+        if (n>2){
+            test(n-1);
+        }
+        System.out.println("n="+n);
+    }
+}
+```
+
+输出: 
+
+```
+n=2
+n=3
+n=4
+
+Process finished with exit code 0
+```
+
