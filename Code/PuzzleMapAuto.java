@@ -1,5 +1,6 @@
+import java.util.Objects;
 import java.util.Scanner;
-public class PuzzleMap {
+public class PuzzleMapAuto {
     public static void main (String[]args){
         int [][] map = new int[9][10];
         for (int i = 0; i< 10; i++){
@@ -27,9 +28,7 @@ public class PuzzleMap {
         Scanner myScanner = new Scanner(System.in);
         String move_a = myScanner.next();
         int mouse = 5;
-        way way  = new way();
-        way.move(move_a,mouse);
-
+        way1 way1  = new way1();
     }
 }
 
@@ -38,7 +37,7 @@ public class PuzzleMap {
 // i和j就是老鼠的位置， 初始化为1.1
 // 因为是递归找路，那么0是可以走；1是障碍物；2可以走；3走过，但是是死路, 4是出口
 // 如果找到 4[8][9]
-class way{
+class way1{
     public boolean findWay(int[][]map, int i, int j){
         if (map [7][8] ==4){
             return true;
@@ -48,22 +47,5 @@ class way{
             } else return false;
         }
         return false;
-    }
-
-
-
-    public void move(String move_a, int mouse){
-        if (Objects.equals(move_a, "w")){
-
-        } else if (Objects.equals(move_a, "a")) {
-            // 左
-            System.out.println("b");
-        } else if (Objects.equals(move_a, "d")) {
-            // 右
-            System.out.println("c");
-        } else if (Objects.equals(move_a, "s")) {
-            // 后
-            System.out.println("d");
-        } else System.out.println("Wrong move");
     }
 }
