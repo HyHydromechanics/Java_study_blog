@@ -201,7 +201,7 @@ p.age = 18;
 
 ![image-20220802103639977](./pic/image-20220802103639977.png)
 
-### 成员方法
+# 成员方法
 
 ***
 
@@ -537,7 +537,7 @@ class ArrayShape{
 
 ***
 
-### ***成员方法传参机制***🌟
+# ***成员方法传参机制***🌟
 
 看案例, 分析结果: 
 
@@ -848,7 +848,24 @@ public class Demo01DiGui {
 }
 ```
 
+- 递归的公式: 
+
+- ```java
+    public void recur(int level , int param){
+        // terminator
+        if(level > MAX_LEVEL){
+            return;
+        }
+        // process current logic
+        process(level, param);
+        // drill down
+        recur(level:level+1 , newParam);
+        // restore current status
+    }
+    ```
+
 - 然后这里是递归的flow chart
+
 - ![0d2b1a681dc9467eb911aa244ba51141](./assets/0d2b1a681dc9467eb911aa244ba51141.png)
 
 > in another word, whenever the fucntion met a thing that implies it self, then it need to go over it and re-calculate it again.
@@ -916,4 +933,190 @@ class Peach{
 ### 方法递归调用(实战应用)
 
 1. 汉诺塔
+
+```java
+import java.util.Scanner;
+
+public class hanoTower {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("请输入圆盘的数量");
+        int num = in.nextInt();
+        hanoi(num, 'A', 'B', 'C');//起始柱、辅助柱、目标柱默认为A、B、C
+    }
+
+    //汉诺塔问题实现
+    //a存放起始柱，b存放辅助柱、c存放目标柱
+    public static void hanoi(int num, char a, char b, char c){
+        if (num == 1) {
+            System.out.println("第" + num + "个圆盘从" + a + " -> " + c);
+        }else{
+            hanoi(num - 1, a, c, b);//借助c把第 num 个以外的圆盘从a移动到b
+            System.out.println("第" + num + "个圆盘从" + a + " -> " + c);//把第num个从a移动到c
+            hanoi(num - 1, b, a, c);//借助a把第 num 个以外的圆盘从b移动到c
+        }
+    }
+
+}
+
+```
+
+
+
+2. 八皇后
+
+```java
+public class eightqueen {
+    public static int MAXQUEEN = 8;   //皇后个数，也是棋盘行列数
+    public static int[][] Board = new int[MAXQUEEN][MAXQUEEN];    //初始化棋盘
+    private static int count;
+
+    public static void startTest(Todo Todo, int row){
+        //第0列开始
+        for (int col = 0; col < MAXQUEEN; col++) {
+            //检查位置是否可以放棋子
+            if (Todo.checkBoard(MAXQUEEN, row, col, Board) == 1){
+                if (row == MAXQUEEN - 1){
+                    count++;
+                }
+                //递归，向下一行前进
+                if (row < MAXQUEEN - 1){
+                    startTest(Todo, ++row);
+                    //回退上一个栈
+                    --row;
+                }
+            }
+            //重新赋值为0，进行下一次判断
+            Board[row][col] = 0;
+        }
+    }
+
+    public static void main(String[] args) {
+        int row = 0;
+        Todo Todo1 = new Todo();
+        startTest(Todo1, row);
+
+        System.out.println("摆放一共有" + count + "种");
+    }
+}
+
+class Todo {
+    //定义横竖斜方向上是否有棋子
+    public static boolean flag = true;
+    //检查棋盘
+    public int checkBoard(int MAXQUEEN, int row, int col, int[][] Board){
+        //行方向上
+        for (int i = 0; i < MAXQUEEN; i++) {
+            if (Board[row][i] == 1){
+                return 0;
+            }
+        }
+        //列方向上
+        for (int i = 0; i < MAXQUEEN; i++) {
+            if (Board[i][col] == 1){
+                return 0;
+            }
+        }
+        //右下方向上
+        for (int i = row, j = col; i < MAXQUEEN && j < MAXQUEEN; i++, j++) {
+            if (Board[i][j] == 1){
+                return 0;
+            }
+        }
+        //左上方向上
+        for (int i = row, j = col; i >= 0 && j >= 0; i--, j--) {
+            if (Board[i][j] == 1){
+                return 0;
+            }
+        }
+        //左下方向上
+        for (int i = row, j = col; i < MAXQUEEN && j >= 0; i++, j--) {
+            if (Board[i][j] == 1){
+                return 0;
+            }
+        }
+        //右上方向上
+        for (int i = row, j = col; i >= 0 && j < MAXQUEEN; i--, j++) {
+            if (Board[i][j] == 1){
+                return 0;
+            }
+        }
+        if (flag) {
+            //此点符合要求，可以下
+            Board[row][col] = 1;
+            //如果已经到最后一行，则打印棋盘
+//            if (row == MAXQUEEN - 1){
+//                printBoard(MAXQUEEN, Board);
+//            }
+            //可以放
+            return 1;
+        }
+        return 0;
+    }
+    //打印棋盘
+    public static void printBoard(int MAXQUEEN, int[][] Board){
+        for (int i = 0; i < MAXQUEEN; i++) {
+            for (int j = 0; j < MAXQUEEN; j++){
+                System.out.print(Board[i][j] + " ");
+            }
+            System.out.println();
+        }
+        System.out.println("================");
+    }
+}
+
+
+```
+
+#### 依旧是递归:
+
+[斐波那契数列另外一个方法的演示](https://leetcode.cn/problems/fei-bo-na-qi-shu-lie-lcof/solution/mian-shi-ti-10-i-fei-bo-na-qi-shu-lie-dong-tai-gui/)
+
+![img](./assets/25e913ab8d7a22bb017669e4a097cf51d10861f365002f2d8556ee7a64464cd8-Picture0.png)
+
+递归的时间复杂度是随着n的增长而增长的`T(n)=o(f(n))` , 也是因为递归的这一个特性, 让我们leetcode中的[这一题](https://leetcode.cn/problems/fei-bo-na-qi-shu-lie-lcof/solution/)直接使用递归来进行取模会导致超时, 这时候就需要换一个思路, 将代码改进为 
+
+```java
+
+class Solution {
+    public int fib(int n) {
+        int a = 0, b = 1, sum;
+        for(int i = 0; i < n; i++){
+            sum = (a + b) % 1000000007;
+            a = b;
+            b = sum;
+        }
+        return a;
+    }
+}
+```
+
+- 具体分析
+- 1. a = 0, b = 1; sum = (a+b)% 1000000007 = 1;
+    2. a = b = 1;
+    3. b = sum = 1;
+- 一轮结束
+    1. a = 1, b = 1; sum = (a+b)% 1000000007 = 2;
+    2. a = b = 1;
+    3. b = sum = 2;
+- 二轮
+- 1. a = 1, b = 2; sum = (a+b)% 1000000007 = 3;
+    2. a = b = 2;
+    3. b = 3;
+- Round 3
+- 1. a = 2, b = 3; sum = 5;
+    2. a = b = 3;
+    3. b = 5;
+- ...
+
+***
+
+# 方法重载(Overload)
+
+- 基本介绍
+    - java中运行同一个类中, 多个命名方法的存在
+
+
+
+
 
