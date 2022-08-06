@@ -1,7 +1,7 @@
 public class FibonacciSequence {
     public static void main (String[]args){
         T t = new T();
-        System.out.println(t.Fib(7));
+        System.out.println(t.Fib(3));
     }
 }
 class T {
