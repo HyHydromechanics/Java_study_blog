@@ -776,3 +776,141 @@ class recursion1Test{
 #### 实战练习
 
 1. 使用递归的方式求出斐波那契数列
+
+```java
+public class FibonacciSequence {
+    public static void main (String[]args){
+        T t = new T();
+        System.out.println(t.Fib(7));
+    }
+}
+class T {
+    public int Fib(int i) {
+        if (i > 0) {
+            if (i == 1 || i == 2) {
+                return 1;
+            } else {
+                return Fib(i-1) + Fib(i-2);
+            }
+        }
+        else System.out.println("bigger than -1");
+        return i;
+    }
+}
+```
+
+### 关于递归的个人理解
+
+[具体的话可以去看这篇blog, 讲的很清晰](https://blog.csdn.net/qq_35427589/article/details/124448494)
+
+刚刚遇到一个问题, 才发现自己上面没太理解递归的原理
+
+- 这里是源码, 可以试着分析一下
+
+```java
+public class Demo01DiGui {
+	public static void main(String[] args) {
+		// a();
+		b(1);
+	}
+	
+	/*
+	 * 3.构造方法,禁止递归
+	 * 编译报错:构造方法是创建对象使用的,不能让对象一直创建下去
+	 */
+	public Demo01DiGui() {
+		//Demo01DiGui();
+	}
+
+
+	/*
+	 * 2.在递归中虽然有限定条件，但是递归次数不能太多。否则也会发生栈内存溢出。
+	 * 4993
+	 * 	Exception in thread "main" java.lang.StackOverflowError
+	 */
+	private static void b(int i) {
+		System.out.println(i);
+		//添加一个递归结束的条件,i==5000的时候结束
+		if(i==5000){
+			return;//结束方法
+		}
+		b(++i);
+	}
+
+	/*
+	 * 1.递归一定要有条件限定，保证递归能够停止下来，否则会发生栈内存溢出。 Exception in thread "main"
+	 * java.lang.StackOverflowError
+	 */
+	private static void a() {
+		System.out.println("a方法");
+		a();
+	}
+}
+```
+
+- 然后这里是递归的flow chart
+- ![0d2b1a681dc9467eb911aa244ba51141](./assets/0d2b1a681dc9467eb911aa244ba51141.png)
+
+> in another word, whenever the fucntion met a thing that implies it self, then it need to go over it and re-calculate it again.
+
+也就是所谓的弹栈
+
+从5一路弹到最后... 弹到1
+
+那么..先做一道leetcode题试试: 难度`中等`
+
+![截屏2022-08-06 11.12.13](./assets/截屏2022-08-06 11.12.13.png)
+
+- 这里的意思就是让你无限相加罢了. 那么也就是说... 递归出来一个无限相加的乘法, 把乘法归到最初始的状态, 具体该怎么做呢?很简单, 和我们上面看到的方法是一模一样的, 使用递归算法: 
+
+- ```java
+    class Solution {
+        public int multiply(int A, int B) {
+            int sum;
+            if (B==0){
+                return B;
+            } else {
+                return A+multiply(A, B-1);
+            }
+        }
+    }
+    ```
+
+- ![截屏2022-08-06 11.21.40](./assets/截屏2022-08-06 11.21.40.png)
+
+泻药
+
+***
+
+2. 猴子吃桃子问题：有一堆桃子，猴子第一天吃了其中的一半，并再多吃了一个！以后每天猴子都吃其中的一半，然后再多吃一个。当到第10天时，想再吃时（即还没吃）发现只有1个桃子了。问题：最初共多少个桃子？
+
+```java
+public class RecursionExercise {
+    public static void main (String[]args){
+        int day = 10;
+        Peach peach = new Peach();
+        peach.peach(10);
+        System.out.println(peach.peach(7));
+    }
+
+
+}
+class Peach{
+    public int peach(int day) {
+        if(day == 10) {
+            return 1;
+        } else if ( day >= 1 && day <=9 ) {
+            return (peach(day + 1) + 1) * 2);
+        } else {
+            System.out.println("day 在1-10");
+            return -1;
+        }
+    }
+}
+```
+
+- 这里重要的是思路分析的逆推, 以及对逻辑: `peach(day + 1) + 1) * 2`的观察
+
+
+
+// 该老鼠出迷宫1了
