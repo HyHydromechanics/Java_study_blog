@@ -730,3 +730,49 @@ n=4
 Process finished with exit code 0
 ```
 
+![image-20220806093817261](./pic/image-20220806093817261.png)
+
+***
+
+- 阶乘
+
+```java
+import java.awt.*;
+
+public class Recursion1 {
+    public static void main (String[]args){
+
+        int res = recursion1Test.factorial(5);
+        System.out.println(res+" a");
+    }
+}
+
+class recursion1Test{
+    public int factorial(int m){
+        if (m==1){
+            return m;
+        } else {
+            return factorial(m-1)*m;
+        }
+
+    }
+}
+```
+
+![image-20220806095723811](./pic/image-20220806095723811.png)
+
+***
+
+#### 递归的重要规则‼️
+
+1. 执行一个方法时, 就创建一个新的受保护的独立空间(栈空间)
+2. 方法的局部变量是独立的, 不会互相影响, 比如n变量
+3. 如果方法中使用的是引用类型变量(数组), 就会 共享该引用类型的数据
+4. 递归必须向递归的条件逼近, 否则就是无限递归, 出现`StackOverflowError`
+5. 当一个方法执行完毕, 或者遇到return, 就会返回, 遵循谁调用, 就把结果返回给谁, 同时当方法执行完毕或者返回的时候, 该方法也就执行完毕
+
+***
+
+#### 实战练习
+
+1. 使用递归的方式求出斐波那契数列
