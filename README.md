@@ -26,3 +26,8 @@
 
 __无盈利目的, 且会保持*持续更新*__
 
+> #### 食用方法:
+>
+> 您可以选择在此网站上直接阅读该文档, 也可以选择下载到本地, 打开`./note`文件夹, 配合Typora进行阅读
+>
+> - 推荐主题: [Drake](https://github.com/liangjingkanji/DrakeTyporaTheme); [SeeYue](https://github.com/jinghu-moon/typora-see-yue-theme)
