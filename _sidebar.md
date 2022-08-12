@@ -9,10 +9,8 @@
   - [嵌套分支](./note/嵌套分支.md)
   - [数组](./note/数组.md)
   - [排序](./note/%E6%8E%92%E5%BA%8F.md)
-  - [类与对象](./note/类与对象(OOP).md)
-  - [成员方法](./note/%E6%88%90%E5%91%98%E6%96%B9%E6%B3%95.md)
-  - [成员方法传参机制](./note/成员方法传参机制.md)
-  - [方法重载](./note/方法重载.md)
+  - [类与对象](./note/%20%E5%AF%B9%E8%B1%A1%E5%88%9B%E5%BB%BA%E6%B5%81%E7%A8%8B%E8%AF%A6%E8%A7%A3.md)
+  - [包](./note/%E5%8C%85.md)
 
 
 - [Hard](./note/note_hard.md)
