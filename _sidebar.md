@@ -10,7 +10,7 @@
   - [数组](./note/数组.md)
   - [排序](./note/%E6%8E%92%E5%BA%8F.md)
   - [类与对象](./note/%20%E5%AF%B9%E8%B1%A1%E5%88%9B%E5%BB%BA%E6%B5%81%E7%A8%8B%E8%AF%A6%E8%A7%A3.md)
-  - [包](./note/%E5%8C%85.md)
+  - [包&访问修饰符](./note/%E5%8C%85.md)
 
 
 - [Hard](./note/note_hard.md)
