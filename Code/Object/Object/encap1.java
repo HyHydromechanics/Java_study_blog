@@ -16,12 +16,28 @@ class Person{
     private double Salary;
     private int age;
 
+    public Person(String name, double salary, int age) {// 构造器
+        this.name = name;
+        Salary = salary;
+        this.age = age;
+    }
+
+    public Person() {
+
+    }
+
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
-        this.name = name;
+        if (name.length()>=2 && name.length()<=6){
+            this.name = name;
+        } else {
+            System.out.println("error name");
+            this.name = "worker";
+        }
+
     }
 
     public double getSalary() {
@@ -33,6 +49,12 @@ class Person{
     }
 
     public int getAge() {
+        if (age >=1 && age <= 120){
+            this.age = age;
+        } else {
+            System.out.println("wrong age");
+            this.age = 18;
+        }
         return age;
     }
 
