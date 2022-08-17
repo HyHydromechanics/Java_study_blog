@@ -16,15 +16,6 @@ class Person{
     private double Salary;
     private int age;
 
-    public Person(String name, double salary, int age) {// 构造器
-        this.name = name;
-        Salary = salary;
-        this.age = age;
-    }
-
-    public Person() {
-
-    }
 
     public String getName() {
         return name;
