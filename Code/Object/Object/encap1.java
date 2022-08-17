@@ -4,8 +4,10 @@ package Object;
 public class encap1 {
     public static void main(String[] args) {
         Person person = new Person();
-        person.name = "Harry";
-
+        person.setName("Harry");
+        person.setAge(30);
+        person.setSalary(2000.1);
+        System.out.println(person.info());
     }
 }
 
@@ -14,4 +16,30 @@ class Person{
     private double Salary;
     private int age;
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getSalary() {
+        return Salary;
+    }
+
+    public void setSalary(double salary) {
+        Salary = salary;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+    public String info(){
+        return "information about name: " + name + " about age " + age + " sal "+ Salary;
+    }
 }
