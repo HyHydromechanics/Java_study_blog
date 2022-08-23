@@ -56,12 +56,15 @@ Class `Object`是类`Object`结构的根。每个班都有`Object`作为超类�
         - ==：既可以判断基本类型，又可以判断引用类型
         - ==：如果可以判断基本类型，判断的是值是否相等。比如`int a = 10; double b = 10.0;`
         - ==：如果判断引用类型，判断的是地址是否相等，也就是说判断是不是同一个对象（详见下面）
+            - 再细说就是只要判断的不是基础数据类型而是数组或String，就会只判断地址相同
     - `equals`是Object类中的方法，只能判断引用类型
         - 默认判断的是地址是否相等，子类中往往重写该方法，用于判断内容是否相等，比如integer，String
 
 ![截屏2022-08-23 12.52.58](assets/截屏2022-08-23 12.52.58.png)
 
-JDK源码
+> `instanceof` 是 Java 的保留关键字。它的作用是测试它左边的对象是否是它右边的类的实例，返回 boolean 的数据类型。
+
+JDK源码 - String.equals
 
 ```java
 //Jdk的源码 String类的 equals方法
@@ -89,11 +92,27 @@ JDK源码
     }
 ```
 
+JDK源码 - Object.equals
 
+```java
+        //即Object 的equals 方法默认就是比较对象地址是否相同
+        //也就是判断两个对象是不是同一个对象.
+	// Object类中的equals方法比较的是地址，注意==对于引用类型比较的是地址，对于基本数据类型比较的是值。
+         public boolean equals(Object obj) {
+            return (this == obj);
+        }
+```
 
+JDK源码 - Integer.equals
 
-
-
+```java
+public boolean equals(Object obj) {
+        if (obj instanceof Integer) {
+            return value == ((Integer)obj).intValue();
+        }
+        return false;
+    }// 不是判断地址，而是单纯的integar后的int值
+```
 
 ```java
 public class Equals01 {
@@ -111,19 +130,11 @@ public class Equals01 {
         System.out.println(num1 == num2);//基本数据类型，判断值是否相等
 
         //equals 方法，源码怎么查看.
-        //把光标放在equals方法，直接输入ctrl+b
+        //把光标放在equals方法，直接输入command+b
         //如果你使用不了. 自己配置. 即可使用.
 
         "hello".equals("abc");
 
-        //看看Object类的 equals 是
-        /*
-        //即Object 的equals 方法默认就是比较对象地址是否相同
-        //也就是判断两个对象是不是同一个对象.
-         public boolean equals(Object obj) {
-            return (this == obj);
-        }
-         */
 
 
         /*
@@ -146,4 +157,83 @@ public class Equals01 {
         System.out.println(str1 == str2);//false
         System.out.println(str1.equals(str2));//true
 ```
+
+## 判断两个对象内容是否相等
+
+```java
+package Object;
+
+public class EqualEx {
+    public static void main(String[] args) {
+        Person11 person11 = new Person11("Harry", 18, 180, 70);
+        Person11 person22 = new Person11("Harry", 18, 180, 70);
+        System.out.println(person11.equals(person22));// 这样（不重写equals）return的是false，因为指向的地址不同
+        // 重写equals后就return true
+    }
+}
+
+class Person11{
+    private String name;
+    private int age;
+    private int height;
+
+    // 重写equals方法
+    public boolean equals(Object obj){
+        // 如果判断比较的两个对象是同一个对象，那就返回true
+       if (this == obj){
+           return true;
+       } if (obj instanceof Person11){// 判断obj是不是Person11的实例
+           // 向下转型，取得obj的属性
+           Person11 person1 = (Person11) obj;
+           return this.name.equals(person1.name) && this.age == person1.age && this.weight == person1.weight && this.height == person1.height;
+        }
+       return false;
+       // 类型的判断
+    }
+
+    
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+    public Person11(String name, int age, int height, int weight) {
+        this.name = name;
+        this.age = age;
+        this.height = height;
+        this.weight = weight;
+    }
+
+    private int weight;
+}
+```
+
+
 
