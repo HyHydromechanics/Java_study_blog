@@ -235,5 +235,183 @@ class Person11{
 }
 ```
 
+### hashCode
 
+> ```
+> public int hashCode()
+> ```
+>
+> 返回对象的哈希码值。支持这种方法是为了散列表，如`HashMap`提供的那样。
+>
+> `hashCode`的总合同是：
+>
+> - 只要在执行Java应用程序时多次在同一个对象上调用该方法， `hashCode`方法必须始终返回相同的整数，前提是修改了对象中`equals`比较中的信息。 该整数不需要从一个应用程序的执行到相同应用程序的另一个执行保持一致。
+> - 如果根据`equals(Object)`方法两个对象相等，则在两个对象中的每个对象上调用`hashCode`方法必须产生相同的整数结果。
+> - 不要求如果两个对象根据`equals(java.lang.Object)`方法不相等，那么在两个对象中的每个对象上调用`hashCode`方法必须产生不同的整数结果。 但是，程序员应该意识到，为不等对象生成不同的整数结果可能会提高哈希表的性能。
+>
+> 尽可能多的合理实用，由类别`Object`定义的hashCode方法确实为不同对象返回不同的整数。 （这通常通过将对象的内部地址转换为整数来实现，但Java的编程语言不需要此实现技术。）
+
+1) 提高具有哈希结构的容器的效率！
+2) 两个引用，如果指向的是同一个对象，则哈希值肯定是一样的！
+3)  两个引用，如果指向的是不同对象，则哈希值是不一样的
+4) 哈希值主要根据地址， 不能完全将哈希值等价于地址
+
+```java
+package Object;
+
+public class HashCode {
+    public static void main(String[] args) {
+        HCTest hcTest = new HCTest();
+        HCTest hcTest1 = new HCTest();
+        HCTest hcTest2 = hcTest1;
+        System.out.println(hcTest1.hashCode());
+        System.out.println(hcTest.hashCode());
+        System.out.println(hcTest2.hashCode());
+    }
+}
+
+class HCTest{
+
+}
+```
+
+### toString
+
+- 基本介绍
+
+    - 默认返回：全类名+@+哈希值的十六进制
+
+        - ```java
+            public String toString() {
+                // getClass().getName()
+                // 类的全类名（包+类名字）
+                // Integer.toHexString(hashCode()) 将最新的hashcode转化成十六进制的字符串
+                    return getClass().getName() + "@" + Integer.toHexString(hashCode());
+                }
+            ```
+
+        - Object.toString源码
+
+    - 代码
+
+    - ```java
+        package Object;
+        
+        public class toString {
+            public static void main(String[] args) {
+                Monster monster = new Monster("wild one", "walk", 3000);
+                System.out.println(monster.toString());
+            }
+        }
+        
+        class Monster{
+            private String name;
+            private String job;
+            private double sal;
+        
+            public Monster(String name, String job, double sal) {
+                this.name = name;
+                this.job = job;
+                this.sal = sal;
+            }
+        }
+        ```
+
+    - 返回值：`Object.Monster@1540e19d` 
+
+- 重写toString
+
+- ```java
+    package Object;
+    
+    public class toString {
+        public static void main(String[] args) {
+            Monster monster = new Monster("wild one", "walk", 3000);
+            System.out.println(monster.toString());// 16进制
+            System.out.println(monster.hashCode());// 10进制
+    
+        }
+    }
+    
+    class Monster{
+        private String name;
+        private String job;
+        private double sal;
+    
+        public Monster(String name, String job, double sal) {
+            this.name = name;
+            this.job = job;
+            this.sal = sal;
+        }
+    
+        // 重写toString方法，输出对象的属性
+        // 快捷键command+N直接改成toString
+        @Override
+        public String toString() {//默认是对象的属性值输出
+            return "Monster{" +
+                    "name='" + name + '\'' +
+                    ", job='" + job + '\'' +
+                    ", sal=" + sal +
+                    '}';
+        }
+    }
+    ```
+
+    
+
+- 当输出一个对象的时候，会默认调用toString方法
+
+### finalize方法
+
+> #### finalize
+>
+> ```java
+> protected void finalize()
+>                  throws Throwable
+> ```
+>
+> 当垃圾收集确定不再有对该对象的引用时，垃圾收集器在对象上调用该对象。一个子类覆盖了处理系统资源或执行其他清理的`finalize`方法。
+>
+> `finalize`的一般合同是，如果Java¢虚拟机已经确定不再有任何方法可以被任何尚未死亡的线程访问的方法被调用，除非是由于最后确定的其他对象或类的准备工作所采取的行动。 `finalize`方法可以采取任何行动，包括使此对象再次可用于其他线程; 然而， `finalize`的通常目的是在对象不可撤销地丢弃之前执行清除动作。 例如，表示输入/输出连接的对象的finalize方法可能会在对象被永久丢弃之前执行显式I / O事务来中断连接。
+>
+> 所述`finalize`类的方法`Object`执行任何特殊操作; 它只是返回正常。 Object的`Object`可以覆盖此定义。
+>
+> Java编程语言不能保证哪个线程将为任何给定的对象调用`finalize`方法。 但是，确保调用finalize的线程在调用finalize时不会持有任何用户可见的同步锁。 如果finalize方法抛出未捕获的异常，则会忽略该异常，并终止该对象的定类。
+>
+> 在为对象调用`finalize`方法之后，在Java虚拟机再次确定不再有任何方式可以通过任何尚未被死亡的线程访问此对象的任何方法的情况下，将采取进一步的操作，包括可能的操作由准备完成的其他对象或类别，此时可以丢弃对象。
+>
+> `finalize`方法从不被任何给定对象的Java虚拟机调用多次。
+>
+> `finalize`方法抛出的任何异常都会导致该对象的终止被停止，否则被忽略。
+
+1) 当对象被回收时，系统自动调用该对象的finalize 方法。子类可以重写该方法，做一些释放资源的操作【演示】
+2) 什么时候被回收：当某个对象没有任何引用时，则jvm 就认为这个对象是一个垃圾对象，就会使用垃圾回收机制来销毁该对象，在销毁该对象前，会先调用finalize 方法。
+3) 垃圾回收机制的调用，是由系统来决定(即有自己的GC 算法), 也可以通过System.gc() 主动触发垃圾回收机制，测试：Car [name]
+
+```java 
+package Object;
+
+public class Finalize {
+    public static void main(String[] args) {
+        Car car = new Car("car");
+        car = null; // 这时候car就变成垃圾了， 垃圾回收器自动回收（销毁）对象
+        // 销毁对象的时候就会调用finalize方法
+        // 那么我们就可以在finalize中写自己的业务逻辑代码
+        System.gc(); // 强制叫出来gc
+    }
+}
+
+class Car{
+    private String name;
+
+    public Car(String name) {
+        this.name = name;
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        System.out.println("Work done");
+    }
+}
+```
 
