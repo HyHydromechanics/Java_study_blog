@@ -7,8 +7,8 @@ import java.util.Scanner;
 
 public class SysOOP {
     Scanner scanner = new Scanner(System.in);
-    boolean loop = true; // switch的循环
-    String command = ""; // 1～4的命令, scanner
+    boolean loop = true; 
+    String command = ""; 
     String detailsTitle = "=====Details About Your Money=====";
     String detailsTitleCopy = "=====Details About Your Money=====";
     double money = 0;
