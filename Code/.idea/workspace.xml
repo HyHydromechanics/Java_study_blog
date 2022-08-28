@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="GROUP_BY_SEVERITY" value="true" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b4511733-613f-4e45-8065-96325f8e22a2" name="Changes" comment="数组练习题">
+      <change afterPath="$PROJECT_DIR$/HousingRentSys.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Object/HouseRent/HouseRentApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Object/HouseRent/domain/House.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Object/HouseRent/utils/Utility.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Object/HouseRent/view/View.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Object/ObjectWork/Homework01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Object/ObjectWork/Work1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjectWork/Work1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Code/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Code/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Code/moneyStorage/SysOOP.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Code/moneyStorage/SysOOP.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../note/note1.md" root0="SKIP_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2Bk2MkfqMpNx3e6vsAdfV0YYzFz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/wangrundong/Documents/GitHub/Java_study_blog/Code&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Object.HouseRent.utils" />
+      <recent name="HousingRentSys.utils" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Constructor (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Constructor" />
+      <module name="Code" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Constructor (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Constructor" />
+      <module name="Code" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Constructor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Constructor" />
+      <module name="Code" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LeetCodeTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Method.LeetCodeTest" />
+      <module name="Code" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Method.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="for_test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="for_test" />
+      <module name="Code" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Unnamed" type="Remote" nameIsGenerated="true">
+      <module name="Code" />
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <option name="AUTO_RESTART" value="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="5005" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.LeetCodeTest" />
+      <item itemvalue="Application.Constructor (1)" />
+      <item itemvalue="Application.Constructor (2)" />
+      <item itemvalue="Application.Constructor" />
+      <item itemvalue="Application.for_test" />
+      <item itemvalue="Remote JVM Debug.Unnamed" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.LeetCodeTest" />
+        <item itemvalue="Application.Constructor (2)" />
+        <item itemvalue="Application.Constructor (1)" />
+        <item itemvalue="Application.Constructor" />
+        <item itemvalue="Application.for_test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b4511733-613f-4e45-8065-96325f8e22a2" name="Changes" comment="" />
+      <created>1657435717186</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1657435717186</updated>
+    </task>
+    <task id="LOCAL-00001" summary="a">
+      <created>1657446130408</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1657446130408</updated>
+    </task>
+    <task id="LOCAL-00002" summary="a">
+      <created>1657446236970</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1657446236970</updated>
+    </task>
+    <task id="LOCAL-00003" summary="break test">
+      <created>1657694219744</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1657694219744</updated>
+    </task>
+    <task id="LOCAL-00004" summary="class files">
+      <created>1657694266301</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1657694266301</updated>
+    </task>
+    <task id="LOCAL-00005" summary="终端登录系统">
+      <created>1657701046504</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1657701046504</updated>
+    </task>
+    <task id="LOCAL-00006" summary="终端登录系统">
+      <created>1657701058612</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1657701058612</updated>
+    </task>
+    <task id="LOCAL-00007" summary="终端">
+      <created>1657703771657</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1657703771657</updated>
+    </task>
+    <task id="LOCAL-00008" summary="continue">
+      <created>1657703795555</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1657703795555</updated>
+    </task>
+    <task id="LOCAL-00009" summary="练习">
+      <created>1657962244971</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1657962244971</updated>
+    </task>
+    <task id="LOCAL-00010" summary="练习">
+      <created>1657962255830</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1657962255830</updated>
+    </task>
+    <task id="LOCAL-00011" summary="数组练习题">
+      <created>1658303883801</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1658303883801</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="a" />
+    <MESSAGE value="break test" />
+    <MESSAGE value="class files" />
+    <MESSAGE value="终端登录系统" />
+    <MESSAGE value="终端" />
+    <MESSAGE value="continue" />
+    <MESSAGE value="练习" />
+    <MESSAGE value="数组练习题" />
+    <option name="LAST_COMMIT_MESSAGE" value="数组练习题" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
