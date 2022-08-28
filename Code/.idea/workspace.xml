@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4511733-613f-4e45-8065-96325f8e22a2" name="Changes" comment="数组练习题">
-      <change afterPath="$PROJECT_DIR$/HousingRentSys.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Object/HouseRent/HouseRentApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Object/HouseRent/domain/House.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Object/HouseRent/utils/Utility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Object/HouseRent/view/View.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Object/ObjectWork/Homework01.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Object/ObjectWork/Work1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjectWork/Work1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Code/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Code/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Code/moneyStorage/SysOOP.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Code/moneyStorage/SysOOP.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Object/HouseRent/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/Object/HouseRent/view/View.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
