@@ -1,6 +1,7 @@
 package Lib.Account;
 
 import Lib.Utility.Utility;
+import Lib.View.view;
 
 import java.util.Scanner;
 
@@ -15,6 +16,27 @@ public class account {
     Utility utility = new Utility();
     Scanner scanner = new Scanner(System.in);
     boolean loopPassword = true;
+    boolean loop = true;
+    public void exit() {
+        //这里我们使用Utility提供方法，完成确认
+        char c = Utility.readConfirmSelection();
+        if (c == 'Y') {
+            loop = false;
+        }
+    }
+    public account(){
+        String key = scanner.next();
+        System.out.println("Do you wan to login or register?1/2");
+        switch (key){
+            case "1":
+                this.Login();
+                break;
+            case "2":
+                this.Reg();
+            case "3":
+                exit();
+        } while (loop);
+    }
     public void Login(){
         System.out.println("====登陆账号====");
         if (username == null){
