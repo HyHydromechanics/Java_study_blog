@@ -5,7 +5,7 @@ public class House {
     private String name;
     private String phoneNum;
     private String address;
-    private String rent;
+    private int rent;
     private String state;
 
     public int getId() {
@@ -40,11 +40,11 @@ public class House {
         this.address = address;
     }
 
-    public String getRent() {
+    public int getRent() {
         return rent;
     }
 
-    public void setRent(String rent) {
+    public void setRent(int rent) {
         this.rent = rent;
     }
 
@@ -56,7 +56,7 @@ public class House {
         this.state = state;
     }
 
-    public House(int id, String name, String phoneNum, String address, String rent, String state) {
+    public House(int id, String name, String phoneNum, String address, int rent, String state) {
         this.id = id;
         this.name = name;
         this.phoneNum = phoneNum;
