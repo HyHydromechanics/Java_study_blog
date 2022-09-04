@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ed4ebaa3-0f10-4861-aab9-8e1da8d280a1" name="Changes" comment="c">
-      <change afterPath="$PROJECT_DIR$/Object/Debug01.java" afterDir="false" />
-    </list>
+    <list default="true" id="ed4ebaa3-0f10-4861-aab9-8e1da8d280a1" name="Changes" comment="c" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,7 +44,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;copyright&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Account">
     <configuration name="Account" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Object.Account" />
       <module name="Object" />
