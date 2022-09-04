@@ -3,21 +3,12 @@ package Lib.View;
 import Lib.Utility.Utility;
 import Lib.Account.account;
 
+import java.util.Scanner;
+
 public class view {
-    public char getKey() {
-        return key;
-    }
-
-    public void setKey(char key) {
-        this.key = key;
-    }
-
-    public view() {
-        this.key = key;
-    }
-
+    Scanner scanner = new Scanner(System.in);
     private boolean loop = true;
-    private char key = ' ';
+    private String  key = " ";
     public void exit() {
         //这里我们使用Utility提供方法，完成确认
         char c = Utility.readConfirmSelection();
@@ -42,12 +33,12 @@ public class view {
             System.out.println("\t\t\t6 账 号 管 理");
             System.out.println("\t\t\t7 退      出");
             System.out.print("请输入你的选择(1-7): ");
-            key = Utility.readChar();
+            key = scanner.next();
             switch (key) {
 
-                case '6':
-                    ;
-                case '7':
+                case "6":
+                    new account().Login();
+                case "7":
                     exit();
                     break;
             }

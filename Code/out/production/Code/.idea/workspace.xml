@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4511733-613f-4e45-8065-96325f8e22a2" name="Changes" comment="数组练习题">
-      <change afterPath="$PROJECT_DIR$/ObjectWork/Homework01.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjectWork/Work1.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjectWork/Work1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OOPAdvanced/ChildGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Object/Lib/View/view.java" beforeDir="false" afterPath="$PROJECT_DIR$/Object/Lib/View/view.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Object/Lib/out/production/Lib/Lib/View/view.class" beforeDir="false" afterPath="$PROJECT_DIR$/Object/Lib/out/production/Lib/Lib/View/view.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +57,13 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Object.HouseRent.utils" />
+      <recent name="HousingRentSys.utils" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.LeetCodeTest">
     <configuration name="Constructor (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Constructor" />
       <module name="Code" />
