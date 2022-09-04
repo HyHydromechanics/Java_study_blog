@@ -27,6 +27,20 @@ public class View {
         }
         System.out.println("======房屋列表显示完毕======");
     }
+    public void HouseAdd(){
+        System.out.println("======房屋添加======");
+        System.out.println("姓名： ");
+        String name = Utility.readString(10);
+        System.out.println("电话： ");
+        String tel = Utility.readString(12);
+        System.out.println("地址： ");
+        String location = Utility.readString(20);
+        System.out.println("月租： ");
+        double rentMoney = scanner.nextDouble();
+        House house = new House(0,name,tel,location, (int) rentMoney,"未出租");
+
+    }
+
 
     public void mainMenu(){
         do {

@@ -1,5 +1,7 @@
 package Object.HouseRent.service;
 
+import Object.HouseRent.domain.House;
+
 public class Service {
     // 房屋信息
     private int id;
@@ -8,6 +10,8 @@ public class Service {
     private String location;
     private double rentMoney;
     private String state;
+
+
 
     public int getId() {
         return id;
