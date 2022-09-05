@@ -12,7 +12,6 @@ public class Service {
     private String state;
 
 
-
     public int getId() {
         return id;
     }

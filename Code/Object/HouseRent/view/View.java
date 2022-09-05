@@ -11,8 +11,8 @@ public class View {
     Scanner scanner = new Scanner(System.in);
     private boolean loop = true;
     private String key;
+    private List list = new List();
 
-    private List list = new List(20);
 
     // list
     public void HouseList(){
@@ -38,7 +38,27 @@ public class View {
         System.out.println("月租： ");
         double rentMoney = scanner.nextDouble();
         House house = new House(0,name,tel,location, (int) rentMoney,"未出租");
+        if (list.addHouse(house)){
+            System.out.println("添加房屋成功");
+        }
+        System.out.println(house);
+    }
+    public void HouseDel(){
+        System.out.println("======房屋删除======");
+        System.out.println("请问您要删除哪个？输入房子的ID编码来进行删除");
+        System.out.println("或输入-1来退出");
 
+        int numDel = Utility.readInt(10);
+        if (numDel>list.listNum()){
+            System.out.println("不存在您所请求的ID");
+        } else if(numDel == -1){
+            this.mainMenu();
+        } else {
+            for (int i = 0; i< list.listNum(); i++){
+                // 调用数组并查找序号
+
+            }
+        }
     }
 
 
@@ -53,15 +73,20 @@ public class View {
             System.out.println("\t\t\t6 退      出");
             System.out.print("请输入你的选择(1-6): ");
             key = scanner.next();
+            if (key.length() != 1){
+                System.out.println("你的输入有误，请重新输入");
+            }
             switch (key){
                 case "1":
                     System.out.println("新增");
+                    this.HouseAdd();
                     break;
                 case "2":
                     System.out.println("Find");
                     break;
                 case "3":
                     System.out.println("Del");
+                    this.HouseDel();
                     break;
                 case "4":
                     System.out.println("Fix");
@@ -73,6 +98,8 @@ public class View {
                 case "6":
                     System.out.println("Quit");
                     this.Quit();
+                default:
+                    System.out.println("你必须选择1～6");
             }
         } while (loop);
     }
@@ -87,7 +114,11 @@ public class View {
         if (Objects.equals(quitCommand, yes) || quitCommand.equals(Yes)){
             loop = false;
             System.out.println("Goodbye");
-        } else if (quitCommand.equals(no))
+        } else if (quitCommand.equals(no)) {
             loop = true;
+        } else {
+            System.out.println("你的输入有误，请重新输入");
+        }
+
     }
 }

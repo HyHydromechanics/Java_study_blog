@@ -4,7 +4,32 @@
     <option name="GROUP_BY_SEVERITY" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4511733-613f-4e45-8065-96325f8e22a2" name="Changes" comment="数组练习题" />
+    <list default="true" id="b4511733-613f-4e45-8065-96325f8e22a2" name="Changes" comment="数组练习题">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Object/HouseRent/out/production/HouseRent/Object/HouseRent/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Object/HouseRent/out/production/HouseRent/Object/HouseRent/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Object/HouseRent/out/production/HouseRent/Object/HouseRent/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Object/HouseRent/out/production/HouseRent/Object/HouseRent/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Object/HouseRent/out/production/HouseRent/Object/HouseRent/Account/Account.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Object/HouseRent/out/production/HouseRent/Object/HouseRent/HouseRent.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Object/HouseRent/out/production/HouseRent/Object/HouseRent/HouseRentApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Object/HouseRent/out/production/HouseRent/Object/HouseRent/domain/House.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Object/HouseRent/out/production/HouseRent/Object/HouseRent/service/List.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Object/HouseRent/out/production/HouseRent/Object/HouseRent/service/Service.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Object/HouseRent/out/production/HouseRent/Object/HouseRent/utils/Utility.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Object/HouseRent/out/production/HouseRent/Object/HouseRent/view/View.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Object/HouseRent/service/List.java" beforeDir="false" afterPath="$PROJECT_DIR$/Object/HouseRent/service/List.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Object/HouseRent/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/Object/HouseRent/service/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Object/HouseRent/utils/Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/Object/HouseRent/utils/Utility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Object/HouseRent/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/Object/HouseRent/view/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Code/OOPAdvanced/Child.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Code/OOPAdvanced/Child.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Code/OOPAdvanced/ChildGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Code/OOPAdvanced/ChildGame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Code/Object/HouseRent/service/List.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Code/Object/HouseRent/service/List.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Code/Object/HouseRent/service/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Code/Object/HouseRent/service/Service.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Code/Object/HouseRent/utils/Utility.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Code/Object/HouseRent/utils/Utility.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Code/Object/HouseRent/view/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Code/Object/HouseRent/view/View.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testForLeetCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/testForLeetCode.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,6 +46,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Object/HouseRent/domain/House.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Object/HouseRent/service/List.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/../note/note1.md" root0="SKIP_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -38,28 +65,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/wangrundong/Documents/GitHub/Java_study_blog/Code&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "last_opened_file_path": "/Users/wangrundong/Documents/GitHub/Java_study_blog/Code/Object/HouseRent/utils",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Object/HouseRent/utils" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="Object.HouseRent.utils" />
       <recent name="HousingRentSys.utils" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.HouseRentApp">
     <configuration name="Constructor (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Constructor" />
       <module name="Code" />
@@ -81,6 +111,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HouseRentApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Object.HouseRent.HouseRentApp" />
+      <module name="Code" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Object.HouseRent.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LeetCodeTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Method.LeetCodeTest" />
       <module name="Code" />
@@ -90,13 +133,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="for_test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="for_test" />
-      <module name="Code" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -116,20 +152,20 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Application.HouseRentApp" />
       <item itemvalue="Application.LeetCodeTest" />
       <item itemvalue="Application.Constructor (1)" />
       <item itemvalue="Application.Constructor (2)" />
       <item itemvalue="Application.Constructor" />
-      <item itemvalue="Application.for_test" />
       <item itemvalue="Remote JVM Debug.Unnamed" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HouseRentApp" />
         <item itemvalue="Application.LeetCodeTest" />
         <item itemvalue="Application.Constructor (2)" />
         <item itemvalue="Application.Constructor (1)" />
         <item itemvalue="Application.Constructor" />
-        <item itemvalue="Application.for_test" />
       </list>
     </recent_temporary>
   </component>
@@ -248,5 +284,10 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Code$HouseRentApp.ic" NAME="HouseRentApp Coverage Results" MODIFIED="1662371457693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Object.HouseRent.*</FILTER>
+    </SUITE>
   </component>
 </project>

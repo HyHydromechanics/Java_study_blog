@@ -6,8 +6,7 @@ package Object.HouseRent.utils;
 	处理各种情况的用户输入，并且能够按照程序员的需求，得到用户的控制台输入。
 */
 
-import java.util.Scanner;
-
+import java.util.*;
 /**
 
 	
