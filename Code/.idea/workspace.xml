@@ -4,22 +4,7 @@
     <option name="GROUP_BY_SEVERITY" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4511733-613f-4e45-8065-96325f8e22a2" name="Changes" comment="数组练习题">
-      <change afterPath="$PROJECT_DIR$/OOPAdvanced/ChildGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Object/Lib/View/view.java" beforeDir="false" afterPath="$PROJECT_DIR$/Object/Lib/View/view.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Object/Lib/out/production/Lib/Lib/View/view.class" beforeDir="false" afterPath="$PROJECT_DIR$/Object/Lib/out/production/Lib/Lib/View/view.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Code/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Code/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Code/HousingRentSys/Account/Account.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Code/HousingRentSys/HousingRentApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Code/HousingRentSys/HousingRentCode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Code/HousingRentSys/utils/Utility.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Code/Object/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Code/Object/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Code/ObjectWork/Homework01.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Code/ObjectWork/Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Code/ObjectWork/Person1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Code/ObjectWork/Work1.class" beforeDir="false" />
-    </list>
+    <list default="true" id="b4511733-613f-4e45-8065-96325f8e22a2" name="Changes" comment="数组练习题" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
