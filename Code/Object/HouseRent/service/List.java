@@ -4,7 +4,7 @@ import java.util.Arrays;
 import Object.HouseRent.domain.House;
 
 public class List {
-    private int size = 3;
+    private int size = 2;
     private House[] houses;
     public int houseID = 1;
     private int IDCounter = 1;
@@ -30,6 +30,7 @@ public class List {
         return true;
     }
 
+    //  似乎没用，再看看
     public boolean delHouse(House newHouse){
         // 动态删除
         houses = Arrays.copyOf(houses, houses.length-1);
@@ -38,8 +39,23 @@ public class List {
         return true;
     }
 
+    public boolean del(int numDel){
+        for (int i = 0; i<houses.length-1; i++) {
+            if (numDel == houses[i].getId()) {
+                for (int j = 0; j < houses.length - 1; j++) {
+                    houses[j] = houses[j+1];
+                }
+                houseID--;
+                IDCounter--;
+                houses = Arrays.copyOf(houses, houses.length - 1);
+                return true;
+            }
+        }
+        return false;
+    }
 
-    public House[] ListA(houses){
+
+    public House[] ListA(){
         return houses;
     }
 }

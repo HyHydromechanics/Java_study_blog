@@ -6,29 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="b4511733-613f-4e45-8065-96325f8e22a2" name="Changes" comment="数组练习题">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Object/HouseRent/out/production/HouseRent/Object/HouseRent/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Object/HouseRent/out/production/HouseRent/Object/HouseRent/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Object/HouseRent/out/production/HouseRent/Object/HouseRent/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Object/HouseRent/out/production/HouseRent/Object/HouseRent/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Object/HouseRent/out/production/HouseRent/Object/HouseRent/Account/Account.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Object/HouseRent/out/production/HouseRent/Object/HouseRent/HouseRent.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Object/HouseRent/out/production/HouseRent/Object/HouseRent/HouseRentApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Object/HouseRent/out/production/HouseRent/Object/HouseRent/domain/House.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Object/HouseRent/out/production/HouseRent/Object/HouseRent/service/List.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Object/HouseRent/out/production/HouseRent/Object/HouseRent/service/Service.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Object/HouseRent/out/production/HouseRent/Object/HouseRent/utils/Utility.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Object/HouseRent/out/production/HouseRent/Object/HouseRent/view/View.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Object/HouseRent/service/List.java" beforeDir="false" afterPath="$PROJECT_DIR$/Object/HouseRent/service/List.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Object/HouseRent/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/Object/HouseRent/service/Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Object/HouseRent/utils/Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/Object/HouseRent/utils/Utility.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Object/HouseRent/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/Object/HouseRent/view/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Code/OOPAdvanced/Child.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Code/OOPAdvanced/Child.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Code/OOPAdvanced/ChildGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Code/OOPAdvanced/ChildGame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Code/Object/HouseRent/service/List.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Code/Object/HouseRent/service/List.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Code/Object/HouseRent/service/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Code/Object/HouseRent/service/Service.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Code/Object/HouseRent/utils/Utility.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Code/Object/HouseRent/utils/Utility.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Code/Object/HouseRent/service/List.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Code/Object/HouseRent/view/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Code/Object/HouseRent/view/View.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testForLeetCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/testForLeetCode.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -286,7 +267,7 @@
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Code$HouseRentApp.ic" NAME="HouseRentApp Coverage Results" MODIFIED="1662371457693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Code$HouseRentApp.ic" NAME="HouseRentApp Coverage Results" MODIFIED="1662376269761" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Object.HouseRent.*</FILTER>
     </SUITE>
   </component>

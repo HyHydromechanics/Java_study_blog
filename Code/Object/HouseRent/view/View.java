@@ -48,18 +48,18 @@ public class View {
         System.out.println("请问您要删除哪个？输入房子的ID编码来进行删除");
         System.out.println("或输入-1来退出");
 
-        int numDel = Utility.readInt(10);
+        int numDel = Utility.readInt();
         if (numDel>list.listNum()){
             System.out.println("不存在您所请求的ID");
         } else if(numDel == -1){
-            this.mainMenu();
-        } else {
-            for (int i = 0; i< list.listNum(); i++){
-                // 调用数组并查找序号
-
-            }
-        }
+            return;
+        } else
+        if (list.del(numDel)){
+            System.out.println("删除成功");
+        }else System.out.println("删除失败");
     }
+
+
 
 
     public void mainMenu(){
