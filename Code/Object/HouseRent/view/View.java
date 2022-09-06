@@ -59,6 +59,24 @@ public class View {
         }else System.out.println("删除失败");
     }
 
+    public void HouseFind(){
+        System.out.println("======房屋查找======");
+        System.out.println("请问您要寻找哪个？输入房子的ID编码来进行查找");
+        System.out.println("或输入-1来退出");
+
+        int numFind = Utility.readInt();
+        if (numFind == -1) {
+            return;
+        }
+        else if (numFind>list.listNum()||numFind<=0) {
+            System.out.println("不存在您所请求的ID");
+        }
+        else if (list.find(numFind)){
+            System.out.println("查找成功");
+        }
+    }
+
+
 
 
 
@@ -83,6 +101,7 @@ public class View {
                     break;
                 case "2":
                     System.out.println("Find");
+                    this.HouseFind();
                     break;
                 case "3":
                     System.out.println("Del");

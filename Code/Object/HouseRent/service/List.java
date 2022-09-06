@@ -54,6 +54,17 @@ public class List {
         return false;
     }
 
+    public boolean find(int numFind){
+        int i = 0;
+        for (;i<houses.length-1; i++){
+            if (numFind == houses[i].getId()){
+                System.out.println("编号\t\t房主\t\t电话\t\t地址\t\t月租\t\t状态");
+                System.out.println(houses[numFind-1]);
+            }
+        }
+        return true;
+    }
+
 
     public House[] ListA(){
         return houses;
