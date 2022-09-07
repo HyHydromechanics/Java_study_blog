@@ -2,6 +2,7 @@ package Object.HouseRent.service;
 
 import java.util.Arrays;
 import Object.HouseRent.domain.House;
+import Object.HouseRent.utils.Utility;
 
 public class List {
     private int size = 2;
@@ -13,7 +14,6 @@ public class List {
     public int listNum(){
         return houses.length;
     }
-
 
     public List(){
         houses = new House[size];
@@ -30,14 +30,14 @@ public class List {
         return true;
     }
 
-    //  似乎没用，再看看
+
     public boolean delHouse(House newHouse){
         // 动态删除
-        houses = Arrays.copyOf(houses, houses.length-1);
-        houseID--;
-        IDCounter--;
+        houses = Arrays.copyOf(houses, houses.length);
+
         return true;
     }
+
 
     public boolean del(int numDel){
         for (int i = 0; i<houses.length-1; i++) {
@@ -46,13 +46,14 @@ public class List {
                     houses[j] = houses[j+1];
                 }
                 houseID--;
-                IDCounter--;
+                --IDCounter;
                 houses = Arrays.copyOf(houses, houses.length - 1);
                 return true;
             }
         }
         return false;
     }
+
 
     public boolean find(int numFind){
         int i = 0;
@@ -62,6 +63,21 @@ public class List {
                 System.out.println(houses[numFind-1]);
             }
         }
+        return true;
+    }
+
+    public boolean change(int numChange){
+        System.out.println("======修改房屋信息======");
+        System.out.println("姓名： ");
+        String name = Utility.readString(10);
+        System.out.println("电话： ");
+        String tel = Utility.readString(12);
+        System.out.println("地址： ");
+        String location = Utility.readString(20);
+        System.out.println("月租： ");
+        int rentMoney = Utility.readInt();
+        houses[numChange -1] = new House(houses[numChange-1].getId(),name,tel,location,rentMoney, "未出租");
+        System.out.println(houses[numChange]);
         return true;
     }
 

@@ -36,8 +36,8 @@ public class View {
         System.out.println("地址： ");
         String location = Utility.readString(20);
         System.out.println("月租： ");
-        double rentMoney = scanner.nextDouble();
-        House house = new House(0,name,tel,location, (int) rentMoney,"未出租");
+        int rentMoney = Utility.readInt();
+        House house = new House(0,name,tel,location, rentMoney,"未出租");
         if (list.addHouse(house)){
             System.out.println("添加房屋成功");
         }
@@ -76,6 +76,22 @@ public class View {
         }
     }
 
+    public void HouseChange(){
+        System.out.println("======修改房屋信息======");
+        System.out.println("请问您要修改哪个？输入房子的ID编码来进行修改");
+        System.out.println("或者输入-1来退出");
+        int numChange = Utility.readInt();
+        if (numChange == -1){
+            return;
+        } else if (numChange> list.listNum() || numChange <=0) {
+            System.out.println("不存在您所请求的ID");
+        } else if (list.find(numChange)) {
+            list.change(numChange);
+            System.out.println("成功查询到您所需要修改的ID");
+
+        }
+    }
+
 
 
 
@@ -109,6 +125,7 @@ public class View {
                     break;
                 case "4":
                     System.out.println("Fix");
+                    this.HouseChange();
                     break;
                 case "5":
                     System.out.println("List");

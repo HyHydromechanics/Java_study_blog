@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4511733-613f-4e45-8065-96325f8e22a2" name="Changes" comment="数组练习题">
-      <change afterPath="$PROJECT_DIR$/OOPAdvanced/ChildGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Object/Lib/View/view.java" beforeDir="false" afterPath="$PROJECT_DIR$/Object/Lib/View/view.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Object/Lib/out/production/Lib/Lib/View/view.class" beforeDir="false" afterPath="$PROJECT_DIR$/Object/Lib/out/production/Lib/Lib/View/view.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Object/HouseRent/HouseRentApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/Object/HouseRent/HouseRentApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Object/HouseRent/service/List.java" beforeDir="false" afterPath="$PROJECT_DIR$/Object/HouseRent/service/List.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Object/HouseRent/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/Object/HouseRent/view/View.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +26,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Object/HouseRent/domain/House.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Object/HouseRent/service/List.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Object/HouseRent/view/View.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/../note/note1.md" root0="SKIP_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -50,7 +54,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/wangrundong/Documents/GitHub/Java_study_blog/Code&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/wangrundong/Documents/GitHub/Java_study_blog/Code/Object/HouseRent/utils&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
@@ -58,12 +62,15 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Object/HouseRent/utils" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="Object.HouseRent.utils" />
       <recent name="HousingRentSys.utils" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.LeetCodeTest">
+  <component name="RunManager" selected="Application.HouseRentApp">
     <configuration name="Constructor (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Constructor" />
       <module name="Code" />
@@ -85,6 +92,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HouseRentApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Object.HouseRent.HouseRentApp" />
+      <module name="Code" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Object.HouseRent.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LeetCodeTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Method.LeetCodeTest" />
       <module name="Code" />
@@ -94,13 +114,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="for_test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="for_test" />
-      <module name="Code" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -120,20 +133,20 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Application.HouseRentApp" />
       <item itemvalue="Application.LeetCodeTest" />
       <item itemvalue="Application.Constructor (1)" />
       <item itemvalue="Application.Constructor (2)" />
       <item itemvalue="Application.Constructor" />
-      <item itemvalue="Application.for_test" />
       <item itemvalue="Remote JVM Debug.Unnamed" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HouseRentApp" />
         <item itemvalue="Application.LeetCodeTest" />
         <item itemvalue="Application.Constructor (2)" />
         <item itemvalue="Application.Constructor (1)" />
         <item itemvalue="Application.Constructor" />
-        <item itemvalue="Application.for_test" />
       </list>
     </recent_temporary>
   </component>
@@ -252,5 +265,10 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Code$HouseRentApp.ic" NAME="HouseRentApp Coverage Results" MODIFIED="1662376269761" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Object.HouseRent.*</FILTER>
+    </SUITE>
   </component>
 </project>

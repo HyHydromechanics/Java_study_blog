@@ -8,3 +8,4 @@ public class HouseRentApp {
         view.mainMenu();
     }
 }
+

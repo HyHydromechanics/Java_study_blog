@@ -6,8 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="b4511733-613f-4e45-8065-96325f8e22a2" name="Changes" comment="数组练习题">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Object/HouseRent/HouseRentApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/Object/HouseRent/HouseRentApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Object/HouseRent/service/List.java" beforeDir="false" afterPath="$PROJECT_DIR$/Object/HouseRent/service/List.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Object/HouseRent/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/Object/HouseRent/view/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Code/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Code/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Code/Object/HouseRent/service/List.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Code/Object/HouseRent/service/List.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Code/Object/HouseRent/view/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Code/Object/HouseRent/view/View.class" afterDir="false" />
     </list>
@@ -29,6 +31,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Object/HouseRent/domain/House.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Object/HouseRent/service/List.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Object/HouseRent/view/View.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/../note/note1.md" root0="SKIP_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -46,21 +49,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "last_opened_file_path": "/Users/wangrundong/Documents/GitHub/Java_study_blog/Code/Object/HouseRent/utils",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/wangrundong/Documents/GitHub/Java_study_blog/Code/Object/HouseRent/utils&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Object/HouseRent/utils" />
