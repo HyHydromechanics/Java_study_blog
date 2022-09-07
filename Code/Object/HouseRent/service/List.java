@@ -29,16 +29,12 @@ public class List {
         newHouse.setId(++IDCounter);
         return true;
     }
-
-
     public boolean delHouse(House newHouse){
         // 动态删除
         houses = Arrays.copyOf(houses, houses.length);
-
+        // houseID--
         return true;
     }
-
-
     public boolean del(int numDel){
         for (int i = 0; i<houses.length-1; i++) {
             if (numDel == houses[i].getId()) {
@@ -53,8 +49,6 @@ public class List {
         }
         return false;
     }
-
-
     public boolean find(int numFind){
         int i = 0;
         for (;i<houses.length-1; i++){

@@ -6,12 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b4511733-613f-4e45-8065-96325f8e22a2" name="Changes" comment="数组练习题">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Object/HouseRent/HouseRentApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/Object/HouseRent/HouseRentApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Object/HouseRent/service/List.java" beforeDir="false" afterPath="$PROJECT_DIR$/Object/HouseRent/service/List.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Object/HouseRent/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/Object/HouseRent/view/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Code/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Code/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Code/Object/HouseRent/service/List.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Code/Object/HouseRent/service/List.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Code/Object/HouseRent/view/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Code/Object/HouseRent/view/View.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,11 +131,11 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.HouseRentApp" />
-      <item itemvalue="Application.LeetCodeTest" />
       <item itemvalue="Application.Constructor (1)" />
       <item itemvalue="Application.Constructor (2)" />
       <item itemvalue="Application.Constructor" />
+      <item itemvalue="Application.HouseRentApp" />
+      <item itemvalue="Application.LeetCodeTest" />
       <item itemvalue="Remote JVM Debug.Unnamed" />
     </list>
     <recent_temporary>
