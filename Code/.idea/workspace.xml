@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4511733-613f-4e45-8065-96325f8e22a2" name="Changes" comment="数组练习题">
+      <change afterPath="$PROJECT_DIR$/testGary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Code/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Code/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Code/Object/HouseRent/service/List.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Code/Object/HouseRent/service/List.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,21 +70,7 @@
       <recent name="HousingRentSys.utils" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.HouseRentApp">
-    <configuration name="Constructor (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Constructor" />
-      <module name="Code" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Constructor (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Constructor" />
-      <module name="Code" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.testGary">
     <configuration name="Constructor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Constructor" />
       <module name="Code" />
@@ -118,6 +104,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Search" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Search" />
+      <module name="Code" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testGary" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="testGary" />
+      <module name="Code" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Unnamed" type="Remote" nameIsGenerated="true">
       <module name="Code" />
       <option name="USE_SOCKET_TRANSPORT" value="true" />
@@ -133,8 +133,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.Constructor (1)" />
-      <item itemvalue="Application.Constructor (2)" />
+      <item itemvalue="Application.Search" />
+      <item itemvalue="Application.testGary" />
       <item itemvalue="Application.Constructor" />
       <item itemvalue="Application.HouseRentApp" />
       <item itemvalue="Application.LeetCodeTest" />
@@ -142,11 +142,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.testGary" />
+        <item itemvalue="Application.Search" />
         <item itemvalue="Application.LeetCodeTest" />
         <item itemvalue="Application.HouseRentApp" />
         <item itemvalue="Application.Constructor" />
-        <item itemvalue="Application.Constructor (2)" />
-        <item itemvalue="Application.Constructor (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -163,6 +163,8 @@
       <workItem from="1662614831476" duration="19000" />
       <workItem from="1662614855107" duration="93000" />
       <workItem from="1662614970676" duration="4000" />
+      <workItem from="1664319646749" duration="53000" />
+      <workItem from="1665110699737" duration="2389000" />
     </task>
     <task id="LOCAL-00001" summary="a">
       <created>1657446130408</created>
