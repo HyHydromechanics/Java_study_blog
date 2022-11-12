@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="HousingRentSys">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Code/HousingRentSys.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

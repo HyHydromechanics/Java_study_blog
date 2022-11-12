@@ -1,4 +1,3 @@
-import sun.lwawt.macosx.CSystemTray;
 /**
  * @author wangrundong
  */
