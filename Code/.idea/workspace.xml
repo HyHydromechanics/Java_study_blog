@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4511733-613f-4e45-8065-96325f8e22a2" name="Changes" comment="数组练习题">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/if01.java" beforeDir="false" afterPath="$PROJECT_DIR$/if01.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Code/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Code/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bitoperator02.java" beforeDir="false" afterPath="$PROJECT_DIR$/bitoperator02.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Code/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Code/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Code/Star.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Code/Star.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Code/if01.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Code/if01.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +70,7 @@
       <recent name="HousingRentSys.utils" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.if01">
+  <component name="RunManager">
     <configuration name="HouseRentApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Object.HouseRent.HouseRentApp" />
       <module name="Code" />
@@ -175,6 +171,7 @@
       <workItem from="1674611159561" duration="1136000" />
       <workItem from="1675818220922" duration="597000" />
       <workItem from="1676000488606" duration="602000" />
+      <workItem from="1677090171177" duration="307000" />
     </task>
     <task id="LOCAL-00001" summary="a">
       <created>1657446130408</created>
